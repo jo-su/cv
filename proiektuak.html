@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>josu.</title>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<script src="js/menu.js"></script>
+</head>
+<header>
+	<div id="lang">
+		<button id="eu" onclick="openNav()">EU</button>
+		<button id="es" onclick="openNav()">ES</button>
+	</div>
+	<button id="menuBtn" onclick="openNav()"><i class="bi bi-list"></i></button>
+	<div id="menu" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="overlay-content">
+		  <a href="index.html">Hasiera</a>
+		  <a href="proiektuak.html">Proiektuak</a>
+		</div>
+	</div>
+</header>
+
+<body>
+
+	<div id="photo"></div>
+	<div id="top">
+		<h1 id="izena">JOSU <br> GARRALDA <br> ARRASTIA</h1>
+		<p id="postua">INGENIARI INFORMATIKOA</p>
+	</div>
+	
+	
+	<p id="deskribapena">
+		Azken urteetan ikasitako ezagutza eta eskuratutako esperientzia praktikan jartzeko proiektu baten bila nabil. Lanean, antolaketarako eta xehetasunerako arreta erakusten dut. Talde lanetan kide guztien ikuspuntua batzea da nire helburua, emailtza hoberena lortzeko.
+	</p>
+
+	<div id="kontaktua">
+		<div id="mail">
+			<i class="bi bi-envelope"></i><a href="mailto:josu.garralda@ni.eus">josu.garralda@ni.eus</a>
+		</div>
+		<div id="city">
+			<i class="bi bi-building"></i><p>Donostia (Gipuzkoa)</p>
+		</div>
+		<div id="linkedin">
+			<i class="bi bi-linkedin"></i><a href="https://www.linkedin.com/in/josu-garralda-5b2414140" target="_blank">Linkedin</a>
+		</div>
+		<div id="github">
+			<i class="bi bi-github"></i><a href="https://github.com/jo-su" target="_blank">Github</a>
+		</div>
+
+	</div>
+
+	<div id="main">
+		<div class="atala">
+			<p lang="eu">Hezkuntza</p>
+			<span></span>
+			<div>
+				<p class="data" lang="eu">2018 - gaur egun</p>
+				<p class="lekua">Mondragon Unibertsitatea</p>
+				<p class="titulua" lang="eu">Ingeniaritza Informatikoan Gradua</p>
+			</div>
+		</div>
+
+		<div class="atala">
+			<p>Lan Esperientzia</p>
+			<div>
+				<p class="data" lang="eu">2019 uztaila - gaur egun</p>
+				<p class="lekua">Mondragon Goi Eskola Politeknikoa</p>
+				<p class="titulua" lang="eu">Praktiken kudeaketaren garapen informatikoan lankidetza</p>
+				<p class="azalpena" lang="eu">Zerbitzu akademikoen departamentuan, prozesu ezberdinetan erabilitako aplikatiboen mantenketa eta garatzea. Oracle datu base baten eta hau erabiltzen duten tresnen (Web orrialdeak, Access formularioak...) kudeaketa.</p>
+			</div>
+		</div>
+
+		<div class="atala">
+			<p lang="eu">Esperientzia Gehigarria</p>
+			<div>
+				<p class="data" lang="eu">2019 martxoa</p>
+				<p class="lekua">PBLDay 2019</p>
+				<p class="titulua" lang="eu">REmotion, eskuen errehabilitaziorako aplikazioa</p>
+				<p class="azalpena" lang="eu">Javan garatutako aplikazioa, Leap Motion sentsorea erabiliz eskuaren mugimendua berreskuratzeko ariketak zuzen egiten direla gainbegiratzen duena.</p>
+			</div>
+			<hr>
+			<div>
+				<p class="data">2018 urtarrila - maiatza</p>
+				<p class="lekua">IKD GAZtE</p>
+				<p class="titulua">Disziplina anitzeko ikasleek autogestionatutako proiektu erreal baten diseinua eta aplikazioa</p>
+				<p class="azalpena">Donostiako Tabakalera arte garaikidearen zentroarekin kolaborazioa, bisita gidatuak berritzeko eta dinamizatzeko helburuarekin.</p>
+			</div>
+		</div>
+
+		<div class="atala short">
+			<p lang="eu">Gaitasunak</p>
+			<div>
+				<p class="lekua">Programazio Lengoaiak</p>
+				<p class="azalpena" lang="eu">Java, Python, C</p>
+			</div>
+			<div>
+				<p class="lekua">Web Teknologiak</p>
+				<p class="azalpena" lang="eu">HTML, CSS, JacaScript, Spring, Thymeleaf, Bootstrap</p>
+			</div>
+			<div>
+				<p class="lekua">Datubaseak</p>
+				<p class="azalpena" lang="eu">SQL, MySQL, Oracle, PostgreSQL, Microsoft Access</p>
+			</div>
+			<div>
+				<p class="lekua">Sistema Eragileak</p>
+				<p class="azalpena" lang="eu">Windows, Linux, macOS</p>
+			</div>
+			<div>
+				<p class="lekua">Bestelakoak</p>
+				<p class="azalpena" lang="eu">Git, Microsoft Office, Photoshop (erabiltzaile maila)</p>
+			</div>
+		</div>
+
+	</div>
+		
+	<div class="side">
+		<div class="atala short">
+			<p lang="eu">Hizkuntzak</p>
+			<div>
+				<p class="lekua">Euskara</p>
+				<p class="titulua" lang="eu">ama hizkuntza</p>
+				<p class="azalpena" lang="eu">C1 (EGA)</p>
+			</div>
+			<div>
+				<p class="lekua">Gaztelania</p>
+				<p class="titulua" lang="eu">maila elebiduna</p>
+			</div>
+			<div>
+				<p class="lekua">Ingelesa</p>
+				<p class="titulua" lang="eu">maila altua</p>
+				<p class="azalpena" lang="eu">C2 (CPE)</p>
+			</div>
+			<div>
+				<p class="lekua">Frantsesa</p>
+				<p class="titulua" lang="eu">erdi maila</p>
+				<p class="azalpena" lang="eu">B1-B2</p>
+			</div>
+			<p class="oharra" lang="eu">*Montpellier, Frantzian egonaldia (2018 uztaila)</p>
+		</div>
+
+		<div class="atala short icons">
+			<p lang="eu">Zaletasunak</p>
+			<div><i class="bi bi-film"></i><p>Musika, ikus-entzunezkoak, artea</p></div>
+			<div><i class="bi bi-compass"></i><p>Bidaiatzea, hizkuntza eta kultura berriak ezagutzea</p></div>
+			<div><i class="bi bi-egg-fried"></i><p>Familia eta lagunekin sukaldatzea</p></div>
+			<div><i class="bi bi-brightness-high"></i><p>Meditazioa</p></div>
+			
+		</div>
+	</div>
+
+
+	
+
+
+</body>
+
+</html>

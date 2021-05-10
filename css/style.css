@@ -1,0 +1,193 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  border:solid 7px #483de0;
+  position:relative;
+  font-family: 'Poppins', sans-serif;
+  color: #000000;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: 45vw;
+  grid-template-areas:"header header"
+                      "photo name"
+                      "photo position"
+                      "deskribapena deskribapena"
+                      "kontaktua kontaktua"
+                      "main main"
+                      "side side";
+}
+
+#kontaktua{
+  grid-area: kontaktua;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem; 
+}
+
+header{
+  grid-area: header;
+}
+
+#mail{order: 1;}
+#linkedin{order: 2;}
+#github{order: 3;}
+#city{order: 4;}
+
+#kontaktua>div{
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+}
+
+#main{
+  grid-area: main; 
+  padding:1rem;
+}
+
+#izena{
+  grid-area: name;
+  color: #483de0;
+  font-weight: 700;
+  margin-top:5rem;
+}
+
+#postua{
+  grid-area: position;
+  color: #483de0;
+}
+
+#deskribapena{
+  grid-area: deskribapena;
+  padding: 1rem;
+  margin-top:1vw;
+}
+
+#photo{
+  grid-area: photo;
+  background-image: url("../img/pic.png");
+  background-size: 100%;
+  background-position: center;
+  background-size:cover;
+  margin-right: 1rem;
+}
+
+.atala>p{
+  color: #483de0;
+  font-weight: bold;
+  border-bottom: 3px solid #483de0;
+}
+
+.data{
+  font-weight: 300;
+  font-size: 10;
+  color: #494949;
+}
+
+.lekua{
+  color: #483de0;
+}
+
+.azalpena{
+  font-weight: 300;
+  font-size: 9;
+}
+
+p.oharra{
+  font-weight:300;
+  font-size:7;
+  color: #494949;
+  border:0;
+}
+
+hr {
+	border: 0;
+	border-top: 2px solid #3b3b3b;
+}
+
+
+
+button{
+  border:none; 
+  background-color: none;
+  padding:0;
+  border-radius: 5%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.short>div{
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.side{
+  grid-area: side;
+  padding:1rem;
+}
+
+.icons>div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+
+i{
+  color: #483de0;
+}
+
+
+@media (min-width: 700px) {
+  body {
+    position:relative;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    display: grid;
+    grid-template-rows: auto auto auto 10.24rem;
+    grid-template-columns: 20rem ;
+    grid-template-areas:"photo name"
+                        "photo position"
+                        "photo deskribapena"
+                        "kontaktua main"
+                        "side main";
+  }
+
+  #izena, #postua{
+    margin-left:1rem;
+  }
+
+  #kontaktua{
+    padding-top:1rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow:0;
+  }
+
+  #mail{order: 1;}
+  #linkedin{order: 3;}
+  #github{order: 4;}
+  #city{order: 2;} 
+}
+
+@media (min-width: 1250px) {
+  body {
+    position:relative;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    display: grid;
+    grid-template-rows: auto auto auto ;
+    grid-template-columns: 20rem 50vw;
+    grid-template-areas:"photo name name"
+                        "photo position position"
+                        "photo deskribapena deskribapena"
+                        "kontaktua main side";
+  }
+}

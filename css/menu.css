@@ -1,0 +1,98 @@
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #483de0;
+    background-color: rgba(56, 53, 219, 0.99);
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #cdcaf3;;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  nav {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  /* applied after scroll height reached */
+  .fixed-nav nav {
+    position: fixed;
+    top:0;
+    z-index: 1;
+  }
+
+  #menuBtn{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width:"1rem";
+    height:"1rem";
+    background-color: #483de0;
+  }
+
+  #lang{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    top: 1rem;
+    right: 4rem;
+    padding: 0.25rem;
+    background-color: #483de0;
+    border:0;
+    color: #483de0;
+  }
+
+  #lang>a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  
+  
+  #menuBtn>i{
+    font-size:2rem;
+    color: #ffffff;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
