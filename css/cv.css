@@ -75,6 +75,7 @@ header{
   background-position: center;
   background-size:cover;
   margin-right: 1rem;
+  border-radius: 1rem;
 }
 
 .atala>p{
