@@ -5,7 +5,7 @@
 }
 
 html{
-  border: solid 7px #483de0;
+  padding:1rem 0;
   height: 100vh;
 }
 
@@ -165,12 +165,12 @@ body>h1{
 
 .carousel {
   grid-area: carousel;
-  padding-bottom: 5vh;
+  padding-bottom: 2rem;
 }
 
 .carousel-cell {
   width: 85%;
-  height: 75vh;
+  height: 85vh;
   margin-right: 10px;
   border-radius: 6px;
   counter-increment: carousel-cell;

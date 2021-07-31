@@ -5,7 +5,7 @@
 }
 
 body {
-  border:solid 7px #483de0;
+  padding:1rem;
   position:relative;
   font-family: 'Poppins', sans-serif;
   color: #000000;
@@ -70,7 +70,7 @@ header{
 
 #photo{
   grid-area: photo;
-  background-image: url("../img/pic.png");
+  background-image: url("../resources/img/pic.png");
   background-size: 100%;
   background-position: center;
   background-size:cover;
@@ -142,6 +142,11 @@ button{
 
 i{
   color: #483de0;
+}
+
+
+#menu i{
+  color: white;
 }
 
 

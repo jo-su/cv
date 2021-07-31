@@ -54,15 +54,16 @@
   }
 
   #menuBtn{
-    position: fixed;
+    position: absolute;
     top: 1rem;
     right: 1rem;
     width:"1rem";
     height:"1rem";
+    padding: 0px 4px;
     background-color: #483de0;
   }
 
-  #lang{
+  #menu{
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -75,13 +76,11 @@
     color: #483de0;
   }
 
-  #lang>a{
+  #menu>a{
     color: #ffffff;
     text-decoration: none;
   }
 
-  
-  
   #menuBtn>i{
     font-size:2rem;
     color: #ffffff;
