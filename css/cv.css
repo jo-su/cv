@@ -5,6 +5,7 @@
 }
 
 body {
+  margin-top:1rem;
   padding:1rem;
   position:relative;
   font-family: 'Poppins', sans-serif;
