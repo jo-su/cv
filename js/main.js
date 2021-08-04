@@ -45,6 +45,19 @@ window.onload = function () {
 		modalOverlay.classList.remove("opened");
 	});
 
+	iframe.addEventListener('load', function() {
+		console.log('iframe loaded!'); 
+		activateIframeTheme();
+	});
+
+	// Send message to the iFrame with the theme we want to activate.
+	function activateIframeTheme() {
+		if (iframe && iframe.contentWindow) {
+	  		iframe.contentWindow.postMessage(theme, (localStorage.getItem("theme")));
+            console.log("sent message to iframe: "+ (localStorage.getItem("theme")));
+		}
+ 	}
+
 	function openModal() {
 		iframe.setAttribute("src", this.getAttribute("href"));
 		modal.classList.add("opened");
