@@ -1,4 +1,5 @@
 window.onload = function(){
+	console.log("iframe-holder ready");
     var iframe = document.querySelector("iframe");
     // Load the light them when the iFrame is ready.
   	iframe.onload = function() {
