@@ -125,7 +125,7 @@ header{
 
 #photo{
   grid-area: photo;
-  background-image: url("../resources/img/pic.png");
+  background-image: url("/resources/img/pic.png");
   background-size: 100%;
   background-position: center;
   background-size:cover;
