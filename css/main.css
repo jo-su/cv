@@ -214,12 +214,12 @@ body.dark-mode .pic{
 
 body.light-mode .modal-overlay:hover,
 body.light-mode .close-button:hover{
-  cursor: url("close.svg"), default;
+  cursor: url("/resources/svg/close.svg"), default;
 }
 
 body.dark-mode .modal-overlay:hover,
 body.dark-mode .close-button:hover{
-  cursor: url("close-white.svg"), default;
+  cursor: url("/resources/svg/close-white.svg"), default;
 }
 
 .modal iframe{

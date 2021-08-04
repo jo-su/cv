@@ -43,9 +43,9 @@ window.onload = function () {
 	});
 
 	// Load the light them when the iFrame is ready.
-	iframe.on("load", function () {
-		activateIframeTheme();
-  	})
+  iframe.onload = function() {
+      activateIframeTheme();
+  }
 
 	// Send message to the iFrame with the theme we want to activate.
 	function activateIframeTheme() {
