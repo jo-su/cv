@@ -42,18 +42,6 @@ window.onload = function () {
 		modalOverlay.classList.remove("opened");
 	});
 
-	// Load the light them when the iFrame is ready.
-  	iframe.onload = function() {
-    	activateIframeTheme();
-  	}
-
-	// Send message to the iFrame with the theme we want to activate.
-	function activateIframeTheme() {
-		if (iframe && iframe.contentWindow) {
-	  		iframe.contentWindow.postMessage(theme, (localStorage.getItem("theme")));
-		}
- 	}
-
 	function openModal() {
 		iframe.setAttribute("src", this.getAttribute("href"));
 		modal.classList.add("opened");
