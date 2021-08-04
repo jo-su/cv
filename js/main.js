@@ -1,4 +1,5 @@
 window.onload = function () {
+	console.log("page loaded!")
 
 	const btn_img = document.querySelector(".dk-button i");
 	const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -67,33 +68,22 @@ window.onload = function () {
 		if (mode == "dark") {
 			document.body.classList.remove("light-mode");
 			document.body.classList.add("dark-mode");
-			try {
+			
 				btn_img.classList.remove("bi-moon-fill");
 				btn_img.classList.add("bi-sun-fill");
-			}
-			catch (e) {
-				
-			}
+			
 			
 			localStorage.setItem("theme", mode);
 		} else if (mode == "light") {
 			document.body.classList.remove("dark-mode");
 			document.body.classList.add("light-mode");
-			try {
+			
 				btn_img.classList.remove("bi-sun-fill");
 				btn_img.classList.add("bi-moon-fill");
-			}
-			catch (e) {
-				
-			}
+			
 			localStorage.setItem("theme", mode);
 		}
 	}
-
-
-
-
-
 
 };
 
