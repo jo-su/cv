@@ -1,5 +1,6 @@
 :root {
   --text: black;
+  --subtext: #494949;
   --highlight: #293abc;
   --background: rgb(250, 250, 250);
   --border: #ddd;
@@ -10,11 +11,12 @@
 html,body{
   margin:0;
   padding:0;
+  overflow-y: hidden;
   overflow-x: hidden;
-  overflow-y:hidden;
 }
 
 body {
+  position: relative;
   height: 100vh;
   width: 100vw;
   display: grid;
@@ -27,6 +29,7 @@ body {
 
 body.light-mode {
   --text: black;
+  --subtext: #494949;
   --highlight: #293abc;
   --background: RGB(250,250,250);
   --border: #ddd;
@@ -34,6 +37,7 @@ body.light-mode {
 
 body.dark-mode {
   --text: #ddd;
+  --subtext: #aaaaaa;
   --highlight: #4e9feb;
   --background: black;
   --border: #424242;
@@ -44,6 +48,7 @@ body.dark-mode .pic{
 }
 
 .footer{
+  z-index: 800;
   position:absolute;
   bottom: 0rem;
   right: 1rem;
@@ -53,7 +58,7 @@ body.dark-mode .pic{
 }
 
 .footer p{
-  color: var(--border);
+  color: var(--subtext);
   font-size: 1rem;
   transition: var(--transition-time);
 }
@@ -146,6 +151,87 @@ body.dark-mode .pic{
   margin-right: 0.5rem;
 }
 
+/*modal*/
+.modal {
+  z-index: 1001;
+  transform: translate3d(0, 0, 0);
+
+  /* Probably need media queries here */
+  width: 99vw;
+  max-width: 80rem;
+  height: 95vh;
+  bottom:-100%;
+  
+  position: absolute;
+
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 1rem 1rem 0rem 0rem;
+  
+  overflow: hidden;
+  opacity: 1;
+  
+  -webkit-transition: bottom 1.5s ease-in-out;
+  -moz-transition: bottom 1.5s ease-in-out;
+  -o-transition: bottom 1.5s ease-in-out;
+  transition: bottom 1.5s ease-in-out;
+}
+
+.modal.opened{
+  bottom: 0;
+  opacity: 1;
+}
+
+.modal-overlay {
+  z-index: 1000;
+  /*background: var(--background);*/
+  background-image: linear-gradient(to bottom, transparent, var(--background));
+  position: fixed;
+  left: 0;
+  bottom: -100%;
+  width:100%;
+  height: 100%; 
+  opacity:0;
+  transition: opacity 1.5s ease-in-out, bottom 1.5s ease-in-out;
+}
+
+.modal-overlay.opened {
+  bottom:0;
+  opacity:1;
+  
+}
+
+.close-button{
+  z-index: 2500;
+  color: var(--text);
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-image: linear-gradient(to top, transparent, var(--border));
+  text-align: center;
+}
+
+body.light-mode .modal-overlay:hover,
+body.light-mode .close-button:hover{
+  cursor: url("close.svg"), default;
+}
+
+body.dark-mode .modal-overlay:hover,
+body.dark-mode .close-button:hover{
+  cursor: url("close-white.svg"), default;
+}
+
+.modal iframe{
+  border: none;
+  height: inherit;
+  width: inherit;
+  max-width: inherit;
+  border-radius: inherit;
+}
+
+
+
 svg textPath { 
     font-size: 45px;
     font-family:  "Poppins";
@@ -224,13 +310,15 @@ line{
 }
 
 
-/* 
+
 @media (min-width: 576px) { 
 
 }
 
 @media (min-width: 768px) {
-
+  .modal {
+    width: 90vw;
+  }
 }
 
 @media (min-width: 992px) {
@@ -241,4 +329,4 @@ line{
   
  }
 
- */
+
