@@ -1,6 +1,5 @@
 window.onload = function () {
 
-	const btn = document.querySelector(".dk-button");
 	const btn_img = document.querySelector(".dk-button i");
 	const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 	const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
@@ -22,15 +21,18 @@ window.onload = function () {
 	window.matchMedia("(prefers-color-scheme: light)")
 		.addEventListener("change", e => e.matches && setDetectedTheme());
 
-	btn.addEventListener("click", function () {
-		if (localStorage.getItem("theme") == "dark") {
-			changeTheme("light");
-			console.log("manual LIGHT")
-		} else {
-			changeTheme("dark");
-			console.log("manual DARK")
-		}
-	});
+	try{
+		const btn = document.querySelector(".dk-button");
+		btn.addEventListener("click", function () {
+			if (localStorage.getItem("theme") == "dark") {
+				changeTheme("light");
+				console.log("manual LIGHT")
+			} else {
+				changeTheme("dark");
+				console.log("manual DARK")
+			}
+		});
+	} catch(e){}
 
 	closeButton.addEventListener("click", function () {
 		modal.classList.remove("opened");
