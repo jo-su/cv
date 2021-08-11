@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 @import 'menu.css';
 
 *{
@@ -76,13 +76,16 @@ header{
 
 #izena{
   grid-area: name;
-  color: var(--highlight);
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
+  color: var(--highlight);
   margin-top:5rem;
 }
 
 #postua{
   grid-area: position;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   color: var(--highlight);
 }
 
@@ -102,10 +105,20 @@ header{
   border-radius: 1rem;
 }
 
+.atala{
+  margin-bottom: 1rem;
+}
+
 .atala>p{
   color: var(--highlight);
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   border-bottom: 3px solid var(--highlight);
+  margin-bottom: 0.5rem;
+}
+
+.atala div p{
+  margin-bottom: 0.2rem;
 }
 
 .data{
@@ -133,6 +146,7 @@ p.oharra{
 hr {
 	border: 0;
 	border-top: 2px solid var(--border);
+  margin: 1rem;
 }
 
 button{
