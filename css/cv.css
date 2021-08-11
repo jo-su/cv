@@ -54,10 +54,6 @@ body.dark-mode .pic{
   gap: 0.5rem; 
 }
 
-header{
-  grid-area: header;
-}
-
 #mail{order: 1;}
 #linkedin{order: 2;}
 #github{order: 3;}
@@ -135,8 +131,6 @@ hr {
 	border-top: 2px solid var(--border);
 }
 
-
-
 button{
   border:none; 
   background-color: none;
@@ -176,12 +170,6 @@ a{
 a:hover{
   color: var(--highlight);
 }
-
-
-#menu i{
-  color: var(--text);
-}
-
 
 @media (min-width: 700px) {
   body {
