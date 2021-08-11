@@ -1,97 +1,36 @@
-.overlay {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #483de0;
-    background-color: rgba(56, 53, 219, 0.99);
-    overflow-y: hidden;
-    transition: 0.5s;
-  }
-  
-  .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #cdcaf3;;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
-  
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+  body.light-mode {
+    --text: black;
+    --subtext: #494949;
+    --highlight: #293abc;
+    --background: RGB(250,250,250);
+    --translucent: RGBA(221, 221, 221, 0.8);
+    --border: #ddd;
   }
 
-  nav {
-    width: 100%;
-    background-color: black;
-    text-align: center;
-    margin: 0 auto;
-  }
-  
-  /* applied after scroll height reached */
-  .fixed-nav nav {
-    position: fixed;
-    top:0;
-    z-index: 1;
-  }
-
-  #menuBtn{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width:"1rem";
-    height:"1rem";
-    padding: 0px 4px;
-    background-color: #483de0;
+  body.dark-mode {
+    --text: #ddd;
+    --subtext: #aaaaaa;
+    --highlight: #4e9feb;
+    --background: black;
+    --translucent: RGBA(42,42,42,0.8);
+    --border: #424242;
   }
 
   #menu{
+    z-index: 2000;
     position: absolute;
     display: flex;
     flex-direction: row;
     gap: 0.25rem;
-    top: 1rem;
+    top: 0rem;
     right: 4rem;
     padding: 0.25rem;
-    background-color: #483de0;
+    background-color: var(--highlight);
     border:0;
-    color: #483de0;
-  }
-
-  #menu>a{
-    color: #ffffff;
-    text-decoration: none;
-  }
-
-  #menuBtn>i{
-    font-size:2rem;
-    color: #ffffff;
+    color: var(--background);
   }
   
-  @media screen and (max-height: 450px) {
-    .overlay {overflow-y: auto;}
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-    }
+  #menu>a{
+    color: var(--background);
+    text-decoration: none;
   }

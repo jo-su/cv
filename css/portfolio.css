@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap');
+@import 'menu.css';
+@import 'flickity.css';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend', sans-serif;
+  margin-top: 4rem;
+  background-color: var(--background);
+  max-width: 1500px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+body.light-mode {
+  --text: black;
+  --subtext: #494949;
+  --highlight: #293abc;
+  --background: RGB(250,250,250);
+  --translucent: RGBA(221, 221, 221, 0.7);
+  --border: #ddd;
+}
+
+body.dark-mode {
+  --text: #ddd;
+  --subtext: #aaaaaa;
+  --highlight: #4e9feb;
+  --background: black;
+  --translucent: RGBA(42,42,42,0.7);
+  --border: #424242;
+}
+
+/*
+.boxes{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+*/
+.box{
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  /*background: url(file:///Users/josu/Desktop/ni/github/cv/resources/img/tournamix.png) no-repeat right;*/
+  background-size: cover;
+  width: 90vw;
+  max-width: 600px;
+  height: 70vh;
+  margin: 0.5rem;
+  position: relative;
+  box-shadow: 0px 1px 4px var(--translucent);
+}
+
+.box.opened{
+  background: var(--border);
+}
+
+.box .box-cover{
+  height: inherit;
+}
+
+.more-button{
+  z-index: 1000;
+  position: absolute;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  border: 1px solid var(--highlight);
+  border-radius: 50%;
+  background-color: var(--highlight);
+  color: var(--background);
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 0 2px var(--subtext);
+}
+
+.box.opened .more-button{
+  transform: rotate(-45deg);
+}
+
+.box .box-more{
+  display:none;
+}
+
+.box.opened .box-more{
+  display:block;
+}
+
+.box.opened .box-cover{
+  display:none;
+}
+
+.box .box-cover .type{
+  grid-area: type;
+  font-size: 1rem;
+  color: var(--background);
+  background-color: var(--highlight);
+  border-top-left-radius: inherit;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+
+  border-radius: 20px;
+  padding: 0.3rem 1rem;
+
+  max-width: 70%;
+
+  z-index: 1000;
+}
+
+.box .box-cover .year{
+  font-size: 1rem;
+  color: var(--background);
+  background-color: var(--highlight);
+  border-radius: 20px;
+  padding: 0.3rem 0.8rem;
+  flex-basis: 1rem;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 1000;
+}
+
+.box .box-cover .box-cover-text{
+  font-size: 2rem;
+  text-align: left;
+  padding: 1rem 2rem 3rem 2rem;
+  color: var(--text);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+  position: absolute;
+  bottom: 0rem;
+  left: 0rem;
+
+  background: var(--translucent);
+  width: 100%;
+  height: inherit;
+
+  border-radius: 4px;
+}
+
+.box .box-cover .box-cover-text h1{
+  color: var(--text);
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.box .box-cover .box-cover-text h2{
+  color: var(--subtext);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.description{
+  max-height: 35vh;
+  color: var(--text);
+  font-size: 1rem;
+  padding:1rem;
+  overflow-y: auto;
+  margin-bottom: 0.5rem;
+}
+
+.tags{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0.5rem;
+  padding: 0rem 1rem 1rem 1rem;
+}
+
+.tags>p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: var(--background);
+  background-color: var(--highlight);
+  border-radius: 20px;
+  padding: 0.3rem 0.8rem;
+  margin:0.5px 0px;
+}
+
+.links{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0.5rem;
+  padding: 0rem 1rem 1rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.links a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  color: var(--highlight);
+  background-color: var(--border);
+  border: 2px solid var(--highlight);
+  border-radius: 20px;
+  margin:0.5px 0px;
+  text-decoration: none;
+  box-shadow: 0 0 1px var(--subtext);
+  font-weight: 600;
+}
+
+.links a i{
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.links a:hover{
+  background-color: var(--highlight);
+  color: var(--background);
+  box-shadow: 0 0 0px var(--subtext);
+}
+
+.carousel {
+  grid-area: carousel;
+  padding-bottom: 2rem;
+}
+
+.carousel-cell.is-selected{
+  box-shadow: 1px 1px 10px var(--translucent);
+}
+
+/* position dots up a bit */
+.flickity-page-dots {
+  bottom: 0px;
+}
+/* dots are lines */
+.flickity-page-dots .dot {
+  height: 10px;
+  width: 10px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+/* smaller, dark, rounded square */
+.flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+@media (min-width: 700px) {
+
+}
+
+@media (min-width: 1250px) {
+
+}

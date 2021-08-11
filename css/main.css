@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap');
+
 :root {
   --text: black;
   --subtext: #494949;
@@ -23,7 +25,7 @@ body {
   place-items: center;
   background-color: var(--background);
   color: var(--text);
-  font: 100% system-ui;
+  font-family: 'Lexend', sans-serif;
   transition: background var(--transition-time);
 }
 
@@ -230,11 +232,8 @@ body.dark-mode .close-button:hover{
   border-radius: inherit;
 }
 
-
-
 svg textPath { 
     font-size: 45px;
-    font-family:  "Poppins";
     text-transform: uppercase;
     letter-spacing: 22px;
     fill: var(--highlight);
