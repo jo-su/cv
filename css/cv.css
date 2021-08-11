@@ -54,6 +54,10 @@ body.dark-mode .pic{
   gap: 0.5rem; 
 }
 
+header{
+  grid-area: header;
+}
+
 #mail{order: 1;}
 #linkedin{order: 2;}
 #github{order: 3;}
