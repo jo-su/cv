@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -5,9 +7,9 @@
 }
 
 body {
-  padding:1.5rem;
+  padding:0rem 1.5rem 1.5rem 1.5rem;
   position:relative;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lexend', sans-serif;
   color: var(--text);
   background: var(--background);
   display: grid;
@@ -216,7 +218,6 @@ a:hover{
 @media (min-width: 700px) {
   body {
     position:relative;
-    font-family: 'Poppins', sans-serif;
     display: grid;
     grid-template-rows: auto auto auto 10.24rem;
     grid-template-columns: 20rem ;
@@ -247,7 +248,6 @@ a:hover{
 @media (min-width: 1250px) {
   body {
     position:relative;
-    font-family: 'Poppins', sans-serif;
     display: grid;
     grid-template-rows: auto auto auto ;
     grid-template-columns: 20rem 50vw;

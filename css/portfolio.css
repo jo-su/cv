@@ -94,15 +94,20 @@ body.dark-mode {
 
 .box .box-more{
   display:none;
+  background-color: var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
 }
 
 .box.opened .box-more{
   display:block;
+  
 }
 
 .box.opened .box-cover{
   display:none;
-  background-color: var(--border);
 }
 
 .box .box-cover .type{
