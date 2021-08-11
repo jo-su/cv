@@ -8,7 +8,7 @@
 }
 
 body {
-  padding:0rem 1.5rem 1.5rem 1.5rem;
+  padding: 1.5rem;
   position:relative;
   font-family: 'Lexend', sans-serif;
   color: var(--text);
