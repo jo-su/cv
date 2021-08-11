@@ -95,9 +95,6 @@ body.dark-mode {
 .box .box-more{
   display:none;
   background-color: var(--border);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   height: 100%;
 }
 
