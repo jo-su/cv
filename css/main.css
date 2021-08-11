@@ -230,7 +230,7 @@ body.dark-mode .close-button:hover{
   width: inherit;
   max-width: inherit;
   border-radius: inherit;
-  margin-top:1rem;
+  margin-top:2.5rem;
 }
 
 svg textPath { 
