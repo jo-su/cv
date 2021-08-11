@@ -52,7 +52,6 @@ body.dark-mode {
 .box{
   border-radius: 5px;
   border: 1px solid var(--border);
-  /*background: url(file:///Users/josu/Desktop/ni/github/cv/resources/img/tournamix.png) no-repeat right;*/
   background-size: cover;
   width: 90vw;
   max-width: 600px;
@@ -95,6 +94,7 @@ body.dark-mode {
 
 .box .box-more{
   display:none;
+  background-color: var(--border);
 }
 
 .box.opened .box-more{

@@ -210,7 +210,7 @@ body.dark-mode .pic{
   position: absolute;
   top: 0;
   width: 100%;
-  background-image: linear-gradient(to top, transparent, var(--border));
+  background-color: var(--background);
   text-align: center;
 }
 
@@ -234,6 +234,7 @@ body.dark-mode .close-button:hover{
 
 svg textPath { 
     font-size: 45px;
+    font-family: 'Lexend', sans-serif;
     text-transform: uppercase;
     letter-spacing: 22px;
     fill: var(--highlight);
