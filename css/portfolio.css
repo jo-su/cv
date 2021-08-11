@@ -227,7 +227,7 @@ body.dark-mode {
   flex-shrink: 0;
   font-size: 0.8rem;
   padding: 0.3rem 0.8rem;
-  color: var(--highlight);
+  color: var(--text);
   background-color: var(--border);
   border: 2px solid var(--highlight);
   border-radius: 20px;
