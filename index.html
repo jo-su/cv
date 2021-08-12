@@ -1,84 +1,346 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>josu.</title>
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-		<script type="text/javascript" src="js/main.js"></script>
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>josu.</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<!--<script type="text/javascript" src="js/portfolio.js"></script>-->
+</head>
 
-	<body class="light-mode">
+<body class="light-mode">
 
-		<div class="footer">
-			<button class="dk-button" >
+	<!--modu aldaketa, hizkuntza...-->
+	<div id="side">
+		<button class="dk-button">
 			<i class="bi bi-moon-fill"></i>
-			</button>
-			<p>&copy; 2021 · Josu Garralda</p>
+		</button>
+	</div>
+
+	<!--hasiera-->
+	<section id="welcome">
+		<div class="signature_container">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" baseProfile="full" preserveAspectRatio="xMidYMid meet" id="svg_sinadura" style="fill:none;stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10;" viewBox="21.5 114.5 445 171.85"><title id="josu_sinadura">Path animation with stroke-dasharray</title><desc id="desc1">This example demonstrates the use of a path element, an animate element, and the stroke-dasharray attribute to simulate drawing.</desc><defs id="svg_document_defs" visibility="visible"/><g id="main_group" visibility="visible"><line stroke="#000000" visibility="visible" y1="118px" id="jota_marra" stroke-width="7px" x1="111.5px" y2="150px" x2="114.5px" transform=""/><path stroke="#000000" id="josu" stroke-width="7px" d="M25,211.5 C30.5,206.5 108.5,159 128.5,175.5 C148.5,192.5 190.5,251 164.5,276.5 C138.5,302 125.5,245 156,206.5 C186.5,168 183.5,179 189.5,182 C195.5,185 211.5,225 231,220 C250.5,215 260.5,188 252,173.5 C243.5,159 222.5,142.5 191,175.5 C159.5,208.5 242,173.5 251,173.5 C260.5,173.5 291,170.5 296.5,195 C302,219.5 286,230 281.5,217.5 C277,205 325,159.5 329,160.5 C333,161.5 342,211 359,205.5 C376,200 390.5,162 392.5,163.5 C394.5,165 396.5,187.5 404.5,203 C412.5,218.5 426.5,214 440,210.5" fill="none" transform=""/></g><line stroke="#000000" y1="212px" id="dot" x1="460px" stroke-width="7px" y2="211px" x2="463px" transform=""/></svg>
 		</div>
 		
-		<div class="card">
-			<div class="spinning_msg">
-				<svg viewBox="0 0 500 500">
-					<defs>
-						<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="circle">
-							<animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="15s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							/>
-						</path>
-					</defs>
-					<text dy="80">
-						<textPath xlink:href="#circle">
-							KAIXO! · HELLO! · BONJOUR! ·
-						</textPath>
-					</text>
-				</svg>
+		<div class="lets">
+			<div class="let">
+				let contact = ['josu.garralda@ni.eus', 'copy'];
 			</div>
-			
-			<div class="pic" style="background-image: url('/resources/img/memoji.jpg') "></div>
-			
-			<div class="content">
-				<a class="button" href="mailto:josu.garralda@ni.eus">
-					<i class="bi bi-envelope-fill"></i> josu.garralda@ni.eus
-				</a>
-				<div class="button modal-button" href="/sub/cv">
-					<i class="bi bi-person-bounding-box"></i> Curriculum Vitae
-				</div>
-				<div class="button modal-button" href="/sub/portfolio">
-					<i class="bi bi-folder-fill"></i> Portfolio
-				</div>
+			<div class="let">
+				let find_me_in = ['linkedin', 'codepen', 'github'];
 			</div>
-			
-			<div class="signature">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" baseProfile="full" viewBox="0 0 480 360" preserveAspectRatio="xMidYMid meet" id="svg_sinadura"  cursor="default">
-					<line class="stroke-marra_jota" stroke="#000000" visibility="visible" y1="118px" id="jota_marra" stroke-width="7px" x1="111.5px" y2="150px" x2="114.5px" transform="" />
-					<path class="stroke-josu" stroke="#000000" id="josu" stroke-width="7px" d="M25,211.5 C30.5,206.5 108.5,159 128.5,175.5 C148.5,192.5 190.5,251 164.5,276.5 C138.5,302 125.5,245 156,206.5 C186.5,168 183.5,179 189.5,182 C195.5,185 211.5,225 231,220 C250.5,215 260.5,188 252,173.5 C243.5,159 222.5,142.5 191,175.5 C159.5,208.5 242,173.5 251,173.5 C260.5,173.5 291,170.5 296.5,195 C302,219.5 286,230 281.5,217.5 C277,205 325,159.5 329,160.5 C333,161.5 342,211 359,205.5 C376,200 390.5,162 392.5,163.5 C394.5,165 396.5,187.5 404.5,203 C412.5,218.5 426.5,214 440,210.5" fill="none" transform=""/>
-					<line class="stroke-puntua" stroke="#000000" y1="212px" id="dot" x1="460px" stroke-width="3px" y2="211px" x2="463px" transform="" macsvgid="7B02E924-3733-4527-AE25-75B7D11C8F83-2967-0000093B08F85D04"/>
-				</svg>
+			<div class="let">
+				let fav_emojis = [':)', 'B)'];
 			</div>
-		
+			<div class="let">
+				let more = ['cv', 'portfolio'];
+			</div>
 		</div>
 
+		<div id="arrow-down">
+			<i class="bi bi-arrow-down"></i>
+		</div>
 		
-		<div class="modal" id="modal">
-			<div class="modal-header">
-				<div class="close-button" id="close-button">
-					<!--<i class="bi bi-x-circle-fill"></i>-->
-					<i class="bi bi-chevron-compact-down"></i>
-				</div>
-			</div>
-			<iframe src="" ></iframe>
+	</section>
+
+	<!--cv-->
+	<!--
+	<section id="cv">
+
+		<div id="photo" class="pic"></div>
+		<div id="top">
+			<h1 id="izena">JOSU <br> GARRALDA <br> ARRASTIA</h1>
+			<p id="postua">INGENIARI INFORMATIKOA</p>
 		</div>
 
-		<div class="modal-overlay" id="modal-overlay"></div>
+		<p id="deskribapena">
+			Azken urteetan ikasitako ezagutza eta eskuratutako esperientzia praktikan jartzeko proiektu baten bila
+			nabil. Lanean, antolaketarako eta xehetasunerako arreta erakusten dut. Talde lanetan kide guztien ikuspuntua
+			batzea da nire helburua, emailtza hoberena lortzeko.
+		</p>
 
-	</body>
+		<div id="kontaktua">
+			<div id="mail">
+				<i class="bi bi-envelope"></i><a href="mailto:josu.garralda@ni.eus">josu.garralda@ni.eus</a>
+			</div>
+			<div id="city">
+				<i class="bi bi-building"></i>
+				<p>Donostia (Gipuzkoa)</p>
+			</div>
+			<div id="linkedin">
+				<i class="bi bi-linkedin"></i><a href="https://www.linkedin.com/in/josu-garralda-5b2414140"
+					target="_blank">Linkedin</a>
+			</div>
+			<div id="github">
+				<i class="bi bi-github"></i><a href="https://github.com/jo-su" target="_blank">Github</a>
+			</div>
+		</div>
+
+		<div id="main">
+			<div class="atala">
+				<p>Hezkuntza</p>
+				<div>
+					<p class="data">2018 - gaur egun</p>
+					<p class="lekua">Mondragon Unibertsitatea</p>
+					<p class="titulua">Ingeniaritza Informatikoan Gradua</p>
+				</div>
+			</div>
+
+			<div class="atala">
+				<p>Lan Esperientzia</p>
+				<div>
+					<p class="data">2019 uztaila - gaur egun</p>
+					<p class="lekua">Mondragon Goi Eskola Politeknikoa</p>
+					<p class="titulua">Praktiken kudeaketaren garapen informatikoan lankidetza</p>
+					<p class="azalpena">Zerbitzu akademikoen departamentuan, prozesu ezberdinetan erabilitako
+						aplikatiboen mantenketa eta garatzea. Oracle datu base baten eta hau erabiltzen duten tresnen
+						(Web orrialdeak, Access formularioak...) kudeaketa.</p>
+				</div>
+			</div>
+
+			<div class="atala">
+				<p>Esperientzia Gehigarria</p>
+				<div>
+					<p class="data">2019 martxoa</p>
+					<p class="lekua">PBLDay 2019</p>
+					<p class="titulua">REmotion, eskuen errehabilitaziorako aplikazioa</p>
+					<p class="azalpena">Javan garatutako aplikazioa, Leap Motion sentsorea erabiliz eskuaren
+						mugimendua berreskuratzeko ariketak zuzen egiten direla gainbegiratzen duena.</p>
+				</div>
+				<hr>
+				<div>
+					<p class="data">2018 urtarrila - maiatza</p>
+					<p class="lekua">IKD GAZtE</p>
+					<p class="titulua">Disziplina anitzeko ikasleek autogestionatutako proiektu erreal baten diseinua
+						eta aplikazioa</p>
+					<p class="azalpena">Donostiako Tabakalera arte garaikidearen zentroarekin kolaborazioa, bisita
+						gidatuak berritzeko eta dinamizatzeko helburuarekin.</p>
+				</div>
+			</div>
+
+			<div class="atala short">
+				<p>Gaitasunak</p>
+				<div>
+					<p class="lekua">Programazio Lengoaiak</p>
+					<p class="azalpena">Java, Python, C</p>
+				</div>
+				<div>
+					<p class="lekua">Web Teknologiak</p>
+					<p class="azalpena">HTML, CSS, JavaScript, Spring, Thymeleaf, Bootstrap</p>
+				</div>
+				<div>
+					<p class="lekua">Datubaseak</p>
+					<p class="azalpena">SQL, MySQL, Oracle, PostgreSQL, Microsoft Access</p>
+				</div>
+				<div>
+					<p class="lekua">Sistema Eragileak</p>
+					<p class="azalpena">Windows, Linux, macOS</p>
+				</div>
+				<div>
+					<p class="lekua">Bestelakoak</p>
+					<p class="azalpena">Git, Microsoft Office, Photoshop (erabiltzaile maila)</p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="side">
+			<div class="atala short">
+				<p>Hizkuntzak</p>
+				<div>
+					<p class="lekua">Euskara</p>
+					<p class="titulua">ama hizkuntza</p>
+					<p class="azalpena">C1 (EGA)</p>
+				</div>
+				<div>
+					<p class="lekua">Gaztelania</p>
+					<p class="titulua">maila elebiduna</p>
+				</div>
+				<div>
+					<p class="lekua">Ingelesa</p>
+					<p class="titulua">maila altua</p>
+					<p class="azalpena">C2 (CPE)</p>
+				</div>
+				<div>
+					<p class="lekua">Frantsesa</p>
+					<p class="titulua">erdi maila</p>
+					<p class="azalpena">B1-B2</p>
+				</div>
+				<p class="oharra">*Montpellier, Frantzian egonaldia (2018 uztaila)</p>
+			</div>
+
+			<div class="atala short icons">
+				<p>Zaletasunak</p>
+				<div><i class="bi bi-film"></i>
+					<p>Musika, ikus-entzunezkoak, artea</p>
+				</div>
+				<div><i class="bi bi-compass"></i>
+					<p>Bidaiatzea, hizkuntza eta kultura berriak ezagutzea</p>
+				</div>
+				<div><i class="bi bi-egg-fried"></i>
+					<p>Familia eta lagunekin sukaldatzea</p>
+				</div>
+				<div><i class="bi bi-brightness-high"></i>
+					<p>Meditazioa</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	-->
+
+	<!--portfolio-->
+	<section id="portfolio">
+		<h1>Portfolio</h1>
+		<div class="boxes">
+			<div class="box" bg-src="resources/img/remotion.png">
+				<div class="box-cover">
+					<p class="type">Mondragon Unibertsitatea - PBL</p>
+					<p class="year">2019</p>
+					<div class="box-cover-text">
+						<h1>REmotion</h1>
+						<h2>Eskuaren erreabilitazioaren jarraipena</h2>
+					</div>
+				</div>
+				<div class="box-more">
+
+					<p class="description">
+						Eskuen birgaitze-prozesuen kudeaketa eta gainbegiratzea optimizatzea ahalbidetzen
+						duen sistema bat garatzea. Fisioterapeutari aukera ematen dio paziente baten
+						errehabilitazio-ariketen garapena behatzeko eta haren bilakaeraren arabera ariketak
+						programatzeko.
+						<br><br>
+						PBL Day 2019-ko Proiektu finalista.
+					</p>
+					<div class="links">
+						<a href="https://www.youtube.com/watch?v=358OJWM1U1A" target="_blank"><i
+								class="bi bi-play-circle-fill"></i> Proiektuaren bideoa</a>
+						<a href="https://www.noticiasdegipuzkoa.eus/actualidad/sociedad/2019/03/13/conocimientos-practica/601819.html"
+							target="_blank"><i class="bi bi-newspaper"></i> Noticias de Gipuzkoa</a>
+						<a href="https://pblday.mondragon.edu/eu/proiektuak/remotion-clinica-rehabilitacion"
+							target="_blank"><i class="bi bi-globe2"></i> PBL Day webgunea</a>
+					</div>
+					<div class="tags">
+						<p>Java</p>
+						<p>Basys3</p>
+						<p>VHDL</p>
+						<p>Leap Motion</p>
+					</div>
+
+				</div>
+				<i class="more-button bi bi-plus"></i>
+			</div>
+
+			<div class="box" bg-src="resources/img/tournamix.png">
+				<div class="box-cover">
+					<p class="type">Mondragon Unibertsitatea - PBL</p>
+					<p class="year">2020</p>
+					<div class="box-cover-text">
+						<h1>Tournamix</h1>
+						<h2>Online Minijokoen Lehiaketa</h2>
+					</div>
+				</div>
+				<div class="box-more">
+					<p class="description">
+						Proiektu honen bitartez bideojoko lehiaketa bat kudeatzen duen web aplikazioa
+						garatu da. Txapelketako jokoa harria papera guraizeak da, baina, hiru marran modu lokalean
+						jokatu
+						daiteke baita ere. Erabiltzaileek estatistikak ikus ditzazkete eta kudeatzaileek DBan gordetako
+						datu
+						guztiak zuzenean ikus ditzakete Grafana bitartez.
+					</p>
+					<div class="links">
+						<a href="https://drive.google.com/file/d/1pn9Yjyr4I7Va30oXzn9Le7DzBwkNV2qj/view?usp=sharing"
+							target="_blank"><i class="bi bi-play-circle-fill"></i> Proiektuaren bideoa</a>
+						<a href="https://docs.google.com/document/d/1sMPhfD-i4K2KGYw5964VLrh3rtgcDFaW/edit?usp=sharing&ouid=106723176726342349110&rtpof=true&sd=true"
+							target="_blank"><i class="bi bi-file-pdf-fill"></i> Proiektuaren Txostena</a>
+					</div>
+					<div class="tags">
+						<p>HTML</p>
+						<p>CSS</p>
+						<p>JavaScript</p>
+						<p>WebSockets</p>
+						<p>Spring</p>
+						<p>Hibernate</p>
+
+					</div>
+				</div>
+				<i class="more-button bi bi-plus"></i>
+			</div>
+
+			<div class="box" bg-src="resources/img/azzzleep.png">
+				<div class="box-cover">
+					<p class="type">Mondragon Unibertsitatea - PBL</p>
+					<p class="year">2021</p>
+					<div class="box-cover-text">
+						<h1>Azzzleep</h1>
+						<h2>Loaren Monitorizazio Adimentsua</h2>
+					</div>
+				</div>
+				<div class="box-more">
+					<p class="description">
+						Lo egitea ezinbestekoa da izaki bizidun guztientzat. Premia hori, gaur egun ere,
+						enigma da zientziarentzat, baina gero eta garrantzi handiagoa ematen diogu. Produktu horren
+						bidez,
+						beren loan eragina izan duten parametroen deskribapen zehatza eman nahi zaie, baita gaualdia
+						optimizatzeko iradokizunak ere.
+					</p>
+					<div class="links">
+						<a href="" target="_blank"><i class="bi bi-file-pdf-fill"></i> Proiektuaren Txostena</a>
+						<a href="" target="_blank"><i class="bi bi-file-pdf-fill"></i> Proiektuaren Aurkezpena</a>
+					</div>
+					<div class="tags">
+						<p>Python</p>
+						<p>Node-RED</p>
+						<p>Java</p>
+						<p>RabbitMQ</p>
+						<p>REST API</p>
+					</div>
+				</div>
+				<i class="more-button bi bi-plus"></i>
+			</div>
+
+			<div class="box" bg-src="resources/img/web-pertsonala.png">
+				<div class="box-cover">
+					<p class="type">Pertsonala</p>
+					<p class="year">2021</p>
+					<div class="box-cover-text">
+						<h1>Web Pertsonala</h1>
+						<h2>Momentuan bisitatzen ari zarena &#128512;</h2>
+					</div>
+				</div>
+
+				<div class="box-more">
+					<p class="description">
+						Nire curriculuma osatzeko web orrialde hau sortzea erabaki dut, orri bakarrean
+						jarri ezin nuen guztia erakutsi ahal izateko. Nire informazio eta ibilbidea azaltzeaz gain,
+						esteka
+						ezberdinak agertzen dira nire Github eta Linkedin kontuetara. Burututako proiektu ezberdinen
+						aukeraketa ere erakusten dut.
+					</p>
+					<div class="tags">
+						<p>HTML</p>
+						<p>CSS</p>
+						<p>JavaScript</p>
+						<p>Github Pages</p>
+					</div>
+				</div>
+
+				<i class="more-button bi bi-plus"></i>
+			</div>
+		</div>
+		<div class="horizontal-scroll">
+			<i class="bi bi-arrows-angle-expand"></i>
+		</div>
+	</section>
+
+	<section id="footer">
+		<p>&copy; 2021 · Josu Garralda</p>
+	</section>
+
+</body>
+
 </html>

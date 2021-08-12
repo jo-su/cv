@@ -1,5 +1,4 @@
 window.onload = function () {
-	console.log("page loaded!")
 
 	const btn_img = document.querySelector(".dk-button i");
 	const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -13,6 +12,11 @@ window.onload = function () {
 	var openModalButtons = document.querySelectorAll('.modal-button');
     openModalButtons.forEach(openModalButton => openModalButton.addEventListener('click', openModal, false));
 
+	var boxes = document.querySelectorAll('.box');
+    boxes.forEach((box) => setBackground(box));
+    
+    var moreButtons = document.querySelectorAll('.more-button');
+    moreButtons.forEach(openModalButton => openModalButton.addEventListener('click', showMore, false));
 
 	setDetectedTheme();
 
@@ -45,10 +49,14 @@ window.onload = function () {
 		modalOverlay.classList.remove("opened");
 	});
 
-	iframe.addEventListener('load', function() {
-		console.log('iframe loaded!'); 
-		activateIframeTheme();
-	});
+	function showMore() {
+        this.parentElement.classList.toggle("opened");
+	}
+
+    function setBackground(box){
+        var url = box.getAttribute("bg-src");
+        box.style.background="url("+url+") no-repeat right"; 
+    }
 
 	// Send message to the iFrame with the theme we want to activate.
 	function activateIframeTheme() {

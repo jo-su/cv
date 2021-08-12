@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap');
-@import 'menu.css';
-@import 'flickity.css';
 
 *{
   margin: 0;
@@ -8,54 +6,32 @@
   box-sizing: border-box;
 }
 
-body {
+section#portfolio {
   font-family: 'Lexend', sans-serif;
-  margin-top: 4rem;
-  background-color: var(--background);
-  max-width: 1500px;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  position: relative;
 }
 
-body.light-mode {
-  --text: black;
-  --subtext: #494949;
-  --highlight: #293abc;
-  --background: RGB(250,250,250);
-  --translucent: RGBA(221, 221, 221, 0.7);
-  --border: #ddd;
-}
-
-body.dark-mode {
-  --text: #ddd;
-  --subtext: #aaaaaa;
-  --highlight: #4e9feb;
-  --background: black;
-  --translucent: RGBA(42,42,42,0.7);
-  --border: #424242;
-}
-
-/*
 .boxes{
-  display:flex;
+  display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
 }
-*/
+
+.box:first-child {
+  margin-left: 1rem;
+}
+
 .box{
+  flex-shrink: 0;
   border-radius: 5px;
   border: 1px solid var(--border);
   background-size: cover;
-  width: 90vw;
-  max-width: 600px;
-  height: 70vh;
+  width: 80vw;
+  max-width: 400px;
+  height: 400px;
   margin: 0.5rem;
   position: relative;
   box-shadow: 0px 1px 4px var(--translucent);
@@ -240,6 +216,7 @@ body.dark-mode {
 .links a i{
   font-size: 1rem;
   margin-right: 0.5rem;
+  color: inherit;
 }
 
 .links a:hover{
@@ -248,38 +225,18 @@ body.dark-mode {
   box-shadow: 0 0 0px var(--subtext);
 }
 
-.carousel {
-  grid-area: carousel;
-  padding-bottom: 2rem;
+.horizontal-scroll{
+  position: absolute;
+  bottom: -0.7rem;
+  right: 10vw;
+  font-size: 3rem;
+  animation: wiggleRight 3s infinite;
+  transform: rotate(45deg);
+  color: var(--highlight);
 }
 
-.carousel-cell.is-selected{
-  box-shadow: 1px 1px 10px var(--translucent);
-}
-
-/* position dots up a bit */
-.flickity-page-dots {
-  bottom: 0px;
-}
-/* dots are lines */
-.flickity-page-dots .dot {
-  height: 10px;
-  width: 10px;
-  margin: 10px;
-  border-radius: 50%;
-}
-
-/* smaller, dark, rounded square */
-.flickity-prev-next-button {
-  width: 30px;
-  height: 30px;
-  border-radius: 10px;
-}
-
-@media (min-width: 700px) {
-
-}
-
-@media (min-width: 1250px) {
-
+@keyframes wiggleRight {
+  0% { right: 10vw; }
+  50% { right: 5vw; }
+  100% { right: 10vw; }
 }

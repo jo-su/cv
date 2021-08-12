@@ -1,21 +1,3 @@
-  body.light-mode {
-    --text: black;
-    --subtext: #494949;
-    --highlight: #293abc;
-    --background: RGB(250,250,250);
-    --translucent: RGBA(221, 221, 221, 0.8);
-    --border: #ddd;
-  }
-
-  body.dark-mode {
-    --text: #ddd;
-    --subtext: #aaaaaa;
-    --highlight: #4e9feb;
-    --background: black;
-    --translucent: RGBA(42,42,42,0.8);
-    --border: #424242;
-  }
-
   #menu{
     z-index: 2000;
     position: absolute;
