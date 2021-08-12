@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 :root {
   --text: black;
@@ -25,7 +25,7 @@ body {
   place-items: center;
   background-color: var(--background);
   color: var(--text);
-  font-family: 'Lexend', sans-serif;
+  font-family: 'Poppins', sans-serif;
   transition: background var(--transition-time);
 }
 
@@ -83,7 +83,7 @@ body.dark-mode .pic{
   max-height: 300px;
   position: relative;
   padding: 1rem 3rem;
-  border: 1px solid var(--border);
+  /*border: 1px solid var(--border);*/
   border-radius: 1rem;
   display: flex;
   align-items: center;
@@ -234,7 +234,7 @@ body.dark-mode .close-button:hover{
 
 svg textPath { 
     font-size: 45px;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     letter-spacing: 22px;
     fill: var(--highlight);
