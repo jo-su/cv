@@ -11,6 +11,7 @@
   --border: #ddd;
   --transition-time: 0s;
   --animation-duration: 5s;
+  --text-size: calc(15px + 1vw);
 }
 
 body.light-mode {
@@ -58,7 +59,7 @@ section#welcome {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border-left: 5px solid var(--highlight);
+  /*border-left: 5px solid var(--highlight);*/
   margin-left: 10vw;
 }
 
@@ -106,14 +107,14 @@ section#welcome {
 
 .let p{
   flex-shrink: 0;
-  font-size: calc(10px + 1vw);
+  font-size: var(--text-size);
 }
 
 .let a{
   text-decoration: none;
   color: var(--highlight);
   font-weight: bold;
-  font-size: calc(10px + 1vw);
+  font-size: var(--text-size);
 }
 
 .let a:hover{
@@ -122,8 +123,8 @@ section#welcome {
 
 
 .feather{
-  width: calc(10px + 1vw);;
-  height: calc(10px + 1vw);;
+  width: var(--text-size);
+  height: var(--text-size);
 }
 
 .feather.smile{
@@ -167,7 +168,7 @@ section#portfolio>h1{
 }
 
 section#footer{
-  border-left: 5px solid var(--highlight);
+  /*border-left: 5px solid var(--highlight);*/
   margin-left: 10vw;
   padding: 1rem;
   font-family: 'Courier New', sans-serif;
@@ -406,7 +407,7 @@ svg textPath {
   }
 
   section#cv, section#portfolio{
-    border-left: 5px solid var(--highlight);
+    /*border-left: 5px solid var(--highlight);*/
     margin-left: 10vw;
   }
 }
