@@ -1,0 +1,44 @@
+/* give the vectors a dashed stroke */
+.stroke-josu {
+    stroke-dasharray: 1000;
+    animation: write1 var(--animation-duration) linear;
+  }
+  
+  .stroke-marra_jota {
+    stroke-dasharray: 300;
+    animation: write2 var(--animation-duration) linear;
+  }
+  
+  .stroke-puntua {
+    stroke-dasharray: 10;
+    animation: write3 var(--animation-duration) linear;
+  }
+  
+  
+  /*  keyframes */
+  @keyframes write1 {
+      0% {
+          stroke-dashoffset: 1000;
+      }
+      70% {
+          stroke-dashoffset: 0;
+      }
+  }
+  
+  @keyframes write2 {
+      0%, 70% {
+          stroke-dashoffset: 300;
+      }
+      95% {
+          stroke-dashoffset: 0;
+      }
+  }
+  
+  @keyframes write3 {
+      0%, 80% {
+          stroke-dashoffset: 10;
+      }
+      100% {
+          stroke-dashoffset: 0;
+      }
+  }

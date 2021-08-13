@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 @import 'menu.css';
-/*@import 'cv.css';*/
+/*@import 'josu-signature-animation.css';*/
+@import 'cv.css';
 @import 'portfolio.css';
 
 :root {
@@ -51,7 +52,7 @@ body{
 section#welcome {
   position: relative;
   height: 100vh;
-  width: calc(90vw - 5px);
+  width: 100vw;
   padding:2rem;
   background-color: var(--background);
   color: var(--text);
@@ -60,7 +61,7 @@ section#welcome {
   flex-direction: column;
   justify-content: space-around;
   /*border-left: 5px solid var(--highlight);*/
-  margin-left: 10vw;
+  margin-left: 0vw;
 }
 
 .signature_container{
@@ -102,7 +103,7 @@ section#welcome {
 }
 
 .button>*{
-  margin: 2px;
+  margin: 5px;
 }
 
 .let p{
@@ -125,13 +126,14 @@ section#welcome {
 .feather{
   width: var(--text-size);
   height: var(--text-size);
+  padding: 2px;
 }
 
-.feather.smile{
+.feather.orange{
   color: orange;
 }
 
-.feather.heart{
+.feather.red{
   color: red;
 }
 
@@ -161,6 +163,12 @@ section#welcome {
   z-index: 1000;
 }
 
+hr.section {
+	border: 0;
+	border-top: 1px solid var(--border);
+  margin: 2rem;
+}
+
 section#portfolio>h1{
   margin-left: 0.5rem;
   margin-bottom:0.5rem;
@@ -169,22 +177,26 @@ section#portfolio>h1{
 
 section#footer{
   /*border-left: 5px solid var(--highlight);*/
-  margin-left: 10vw;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
   padding: 1rem;
   font-family: 'Courier New', sans-serif;
-  font-weight: regular;
-  height: 100px;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
+
 .dk-button{
+  font-size: 1.5rem;
   border-radius: 5px;
-  background-color: var(--border);
   padding:5px;
-  margin-right:1rem;
   border:0;
   cursor: pointer;
-  transition: var(--transition-time);
-  color: var(--text);
+  /*transition: var(--transition-time);*/
+  color: var(--highlight);
+  background-color: var(--translucent);
 }
 
 .card {
@@ -204,38 +216,6 @@ section#footer{
   /*background-color: var(--border);*/
 }
 
-.spinning_msg{
-  position: absolute;
-  z-index:20;
-
-  width: 15rem;
-  height: 15rem;
-  top: -7.5rem;
-  left: -1.5rem;
-}
-
-.pic{
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index:20;
-  border-radius: 50%;
-  position: absolute;
-  
-  width: 6rem;
-  height: 6rem;
-  top: -3rem;
-  left: 3rem;
-}
-
-.signature{
-  z-index:20;
-  position: absolute;
-
-  bottom:-3.5rem;
-  right: -2rem;
-  width: 15rem;
-}
-
 .content{
   display:flex;
   flex-direction: column;
@@ -243,20 +223,13 @@ section#footer{
   transition: var(--transition-time);
 }
 
-.button{
-  z-index:100;
-  padding:0.5rem;
-  cursor: pointer;
+a{
+  color:  var(--highlight);
   text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction:row;
-  font-size: 1.25rem;
 }
 
-.button:hover{
-  color: var(--highlight);
+a:hover{
+  text-decoration: underline;
 }
 
 /*modal*/
@@ -330,59 +303,6 @@ body.dark-mode .close-button:hover{
   cursor: url("/resources/svg/close-white.svg"), default;
 }
 
-svg textPath { 
-    font-size: 45px;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 22px;
-    fill: var(--highlight);
-}
-
-/* give the vectors a dashed stroke */
-.stroke-josu {
-  stroke-dasharray: 1000;
-  animation: write1 var(--animation-duration) linear;
-}
-
-.stroke-marra_jota {
-  stroke-dasharray: 300;
-  animation: write2 var(--animation-duration) linear;
-}
-
-.stroke-puntua {
-  stroke-dasharray: 10;
-  animation: write3 var(--animation-duration) linear;
-}
-
-
-/*  keyframes */
-@keyframes write1 {
-    0% {
-        stroke-dashoffset: 1000;
-    }
-    70% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes write2 {
-    0%, 70% {
-        stroke-dashoffset: 300;
-    }
-    95% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes write3 {
-    0%, 80% {
-        stroke-dashoffset: 10;
-    }
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
 @keyframes typing {
   from {
     width: 0
@@ -410,6 +330,16 @@ svg textPath {
     /*border-left: 5px solid var(--highlight);*/
     margin-left: 10vw;
   }
+
+  section#welcome {
+    width: 90vw;
+    margin-left: 10vw;
+  }
+  section#footer {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+
 }
 
 @media (min-width: 992px) {

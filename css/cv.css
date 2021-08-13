@@ -13,10 +13,9 @@ section#cv {
   color: var(--text);
   background: var(--background);
   display: grid;
-  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   grid-template-columns: 45vw;
-  grid-template-areas:"header header"
-                      "photo name"
+  grid-template-areas:"photo name"
                       "photo position"
                       "deskribapena deskribapena"
                       "kontaktua kontaktua"
@@ -96,7 +95,7 @@ header{
 
 #photo{
   grid-area: photo;
-  background-image: url("/resources/img/pic.png");
+  background-image: url("../resources/img/pic.png");
   background-size: 100%;
   background-position: center;
   background-size:cover;

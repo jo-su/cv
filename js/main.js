@@ -93,7 +93,7 @@ window.onload = function () {
 			document.body.classList.add("dark-mode");
 			
 				btn_img.classList.remove("bi-moon-fill");
-				btn_img.classList.add("bi-sun-fill");
+				btn_img.classList.add("bi-sun");
 			
 			
 			localStorage.setItem("theme", mode);
@@ -101,7 +101,7 @@ window.onload = function () {
 			document.body.classList.remove("dark-mode");
 			document.body.classList.add("light-mode");
 			
-				btn_img.classList.remove("bi-sun-fill");
+				btn_img.classList.remove("bi-sun");
 				btn_img.classList.add("bi-moon-fill");
 			
 			localStorage.setItem("theme", mode);
