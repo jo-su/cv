@@ -64,8 +64,7 @@ section#welcome {
 
 .signature_container{
   width: 50vw;
-  max-width:400px;
-  height: 200px;
+  max-width:300px;
 }
 
 .signature_container path,line{
@@ -73,13 +72,70 @@ section#welcome {
 }
 
 .lets{
-  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.lets .let{
-  margin-bottom: 1rem;
-  font-size: 2rem;
+.let, .button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 30px;
+}
+
+.let .array{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 0.5rem;
+}
+
+.let{
+  flex-wrap: wrap;
+}
+
+.button{
+  flex-shrink: 0;
+}
+
+.button>*{
+  margin: 2px;
+}
+
+.let p{
+  flex-shrink: 0;
+  font-size: calc(10px + 1vw);
+}
+
+.let a{
+  text-decoration: none;
+  color: var(--highlight);
   font-weight: bold;
+  font-size: calc(10px + 1vw);
+}
+
+.let a:hover{
+  text-decoration: underline;
+}
+
+
+.feather{
+  width: calc(10px + 1vw);;
+  height: calc(10px + 1vw);;
+}
+
+.feather.smile{
+  color: orange;
+}
+
+.feather.heart{
+  color: red;
+}
+
+.feather.thumb{
+  color: green;
 }
 
 #arrow-down{
@@ -115,22 +171,8 @@ section#footer{
   margin-left: 10vw;
   padding: 1rem;
   font-family: 'Courier New', sans-serif;
-}
-
-.footer{
-  z-index: 800;
-  position:absolute;
-  bottom: 0rem;
-  right: 1rem;
-  display:flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.footer p{
-  color: var(--subtext);
-  font-size: 1rem;
-  transition: var(--transition-time);
+  font-weight: regular;
+  height: 100px;
 }
 
 .dk-button{
@@ -203,7 +245,6 @@ section#footer{
 .button{
   z-index:100;
   padding:0.5rem;
-  margin: 0.25rem;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
@@ -215,10 +256,6 @@ section#footer{
 
 .button:hover{
   color: var(--highlight);
-}
-
-.button i{
-  margin-right: 0.5rem;
 }
 
 /*modal*/
@@ -290,14 +327,6 @@ body.light-mode .close-button:hover{
 body.dark-mode .modal-overlay:hover,
 body.dark-mode .close-button:hover{
   cursor: url("/resources/svg/close-white.svg"), default;
-}
-
-.modal iframe{
-  border: none;
-  height: inherit;
-  width: inherit;
-  max-width: inherit;
-  margin-top:2.5rem;
 }
 
 svg textPath { 

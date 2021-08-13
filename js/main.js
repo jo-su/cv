@@ -19,6 +19,8 @@ window.onload = function () {
     moreButtons.forEach(openModalButton => openModalButton.addEventListener('click', showMore, false));
 
 	setDetectedTheme();
+	
+	feather.replace();
 
 	window.matchMedia("(prefers-color-scheme: dark)")
 		.addEventListener("change", e => e.matches && setDetectedTheme());
