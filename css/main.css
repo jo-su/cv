@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import 'menu.css';
-/*@import 'josu-signature-animation.css';*/
+@import 'josu-signature-animation.css';
 @import 'cv.css';
 @import 'portfolio.css';
 
@@ -46,7 +47,7 @@ html, body{
 
 body{
   position: relative;
-  font-family: 'Courier New', sans-serif;
+  font-family: 'Courier Prime', 'Courier New', sans-serif;
 }
 
 section#welcome {
@@ -56,7 +57,7 @@ section#welcome {
   padding:2rem;
   background-color: var(--background);
   color: var(--text);
-  font-family: 'Courier New', sans-serif;
+  font-family: 'Courier Prime', 'Courier New', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -122,7 +123,6 @@ section#welcome {
   text-decoration: underline;
 }
 
-
 .feather{
   width: var(--text-size);
   height: var(--text-size);
@@ -141,18 +141,31 @@ section#welcome {
   color: green;
 }
 
-#arrow-down{
+.arrow-down{
   animation: wiggleDown 3s infinite;
 }
 
-#arrow-down>i{
+.arrow-up{
+  cursor: pointer;
+  animation: wiggleUp 3s infinite;
+  transition: 1s;
+}
+
+.arrow>i{
   font-size: 3rem;
   color: var(--highlight);
+  transition: 1s;
 }
 
 @keyframes wiggleDown {
   0% { transform: translateY(0); }
   50% { transform: translateY(2em); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes wiggleUp {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-1em); }
   100% { transform: translateY(0); }
 }
 
@@ -177,10 +190,10 @@ section#portfolio>h1{
 
 section#footer{
   /*border-left: 5px solid var(--highlight);*/
-  margin-bottom: 2rem;
-  margin-right: 2rem;
+  /*margin-bottom: 2rem;
+  margin-right: 2rem;*/
   padding: 1rem;
-  font-family: 'Courier New', sans-serif;
+  font-family: 'Courier Prime', 'Courier New', sans-serif;
   display:flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -189,14 +202,15 @@ section#footer{
 
 
 .dk-button{
-  font-size: 1.5rem;
+  font-size: 1rem;
   border-radius: 5px;
   padding:5px;
-  border:0;
   cursor: pointer;
   /*transition: var(--transition-time);*/
   color: var(--highlight);
-  background-color: var(--translucent);
+  /*background-color: var(--translucent);*/
+  background: none;
+	border: none;
 }
 
 .card {
@@ -225,11 +239,16 @@ section#footer{
 
 a{
   color:  var(--highlight);
+  font-weight: bold;
   text-decoration: none;
 }
 
 a:hover{
   text-decoration: underline;
+}
+
+i{
+  color: var(--highlight);
 }
 
 /*modal*/
@@ -315,8 +334,7 @@ body.dark-mode .close-button:hover{
   }
 }
 
-
-
+/*media queries*/
 @media (min-width: 576px) { 
 
 }
@@ -326,15 +344,20 @@ body.dark-mode .close-button:hover{
     width: 90vw;
   }
 
-  section#cv, section#portfolio{
-    /*border-left: 5px solid var(--highlight);*/
-    margin-left: 10vw;
-  }
-
   section#welcome {
     width: 90vw;
     margin-left: 10vw;
   }
+
+  section#cv{
+    /*border-left: 5px solid var(--highlight);*/
+    margin-left: 10vw;
+  }
+
+  section#portfolio .box:first-child, section#portfolio>h1 {
+    margin-left: calc(1rem + 10vw);
+  }
+
   section#footer {
     width: 80vw;
     margin-left: 10vw;
@@ -347,7 +370,7 @@ body.dark-mode .close-button:hover{
  }
 
 @media (min-width: 1200px) {
-  
- }
+
+}
 
 

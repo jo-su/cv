@@ -7,6 +7,7 @@
 }
 
 section#cv {
+  max-width: 1000px;
   padding: 1.5rem;
   position:relative;
   font-family: 'Lexend', sans-serif;
@@ -15,45 +16,20 @@ section#cv {
   display: grid;
   grid-template-rows: auto auto auto auto auto;
   grid-template-columns: 45vw;
-  grid-template-areas:"photo name"
-                      "photo position"
+  grid-template-areas:"photo top"
+                      "photo top"
                       "deskribapena deskribapena"
                       "kontaktua kontaktua"
                       "main main"
                       "side side";
 }
 
-body.light-mode {
-  --text: black;
-  --subtext: #494949;
-  --highlight: #293abc;
-  --background: RGB(250,250,250);
-  --border: #ddd;
-}
-
-body.dark-mode {
-  --text: #ddd;
-  --subtext: #aaaaaa;
-  --highlight: #4e9feb;
-  --background: black;
-  --border: #424242;
-}
-
-body.dark-mode .pic{
-  filter: grayscale(20%) brightness(85%);
-}
-
 #kontaktua{
   grid-area: kontaktua;
-  padding-left: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.5rem; 
-}
-
-header{
-  grid-area: header;
 }
 
 #mail{order: 1;}
@@ -72,19 +48,27 @@ header{
   padding:1rem;
 }
 
+#top{
+  grid-area: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 #izena{
-  grid-area: name;
   font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--highlight);
   margin-top:5rem;
+  margin-bottom: 1rem;
 }
 
 #postua{
-  grid-area: position;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   color: var(--highlight);
+  margin-bottom: 1rem;
 }
 
 #deskribapena{
@@ -175,57 +159,23 @@ button{
   gap: 0.5rem;
 }
 
-i{
-  color: var(--highlight);
-}
-
-a{
-  color: var(--text);
-}
-
-a:hover{
-  color: var(--highlight);
-}
-
 @media (min-width: 700px) {
   section#cv {
     position:relative;
     display: grid;
-    grid-template-rows: auto auto auto 10.24rem;
+    grid-template-rows: auto auto auto;
     grid-template-columns: 20rem ;
-    grid-template-areas:"photo name"
-                        "photo position"
+    grid-template-areas:"photo top"
+                        "photo top"
                         "photo deskribapena"
-                        "kontaktua main"
                         "side main";
   }
 
-  #izena, #postua{
+  #top{
     margin-left:1rem;
   }
-
-  #kontaktua{
-    padding-top:1rem;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    flex-grow:0;
-  }
-
-  #mail{order: 1;}
-  #linkedin{order: 3;}
-  #github{order: 4;}
-  #city{order: 2;} 
 }
 
 @media (min-width: 1250px) {
-  section#cv {
-    position:relative;
-    display: grid;
-    grid-template-rows: auto auto auto ;
-    grid-template-columns: 20rem 50vw;
-    grid-template-areas:"photo name name"
-                        "photo position position"
-                        "photo deskribapena deskribapena"
-                        "kontaktua main side";
-  }
+
 }

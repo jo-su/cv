@@ -28,6 +28,8 @@ window.onload = function () {
 	window.matchMedia("(prefers-color-scheme: light)")
 		.addEventListener("change", e => e.matches && setDetectedTheme());
 
+	document.getElementById("scroll-up").addEventListener("click", scrollToTop);
+
 	try{
 		const btn = document.querySelector(".dk-button");
 		btn.addEventListener("click", function () {
@@ -72,7 +74,14 @@ window.onload = function () {
 		iframe.setAttribute("src", this.getAttribute("href"));
 		modal.classList.add("opened");
 		modalOverlay.classList.add("opened");
+	}
 
+	function scrollToTop() {
+		// Scroll to top logic
+		document.documentElement.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		})
 	}
 
 	function setDetectedTheme() {
@@ -83,7 +92,6 @@ window.onload = function () {
 		} else {
 			console.log("detected LIGHT");
 			changeTheme("light");
-
 		}
 	}
 
@@ -94,7 +102,6 @@ window.onload = function () {
 			
 				btn_img.classList.remove("bi-moon-fill");
 				btn_img.classList.add("bi-sun");
-			
 			
 			localStorage.setItem("theme", mode);
 		} else if (mode == "light") {
