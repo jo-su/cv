@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import 'menu.css';
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&Lexend:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 @import 'josu-signature-animation.css';
 @import 'cv.css';
 @import 'portfolio.css';
@@ -10,10 +8,15 @@
   --subtext: #494949;
   --highlight: #293abc;
   --background: rgb(250, 250, 250);
+  --translucent: RGBA(221, 221, 221, 0.5);
+  --supertranslucent: RGBA(221, 221, 221, 0.3);
   --border: #ddd;
   --transition-time: 0s;
   --animation-duration: 5s;
   --text-size: calc(15px + 1vw);
+  --code-font: 'Courier Prime', 'Courier New', sans-serif;
+  --title-font: 'Poppins', sans-serif;
+  --text-font: 'Lexend', sans-serif;
 }
 
 body.light-mode {
@@ -49,7 +52,7 @@ html, body{
 
 body{
   position: relative;
-  font-family: 'Courier Prime', 'Courier New', sans-serif;
+  font-family: var(--code-font);
 }
 
 section#welcome {
@@ -59,12 +62,11 @@ section#welcome {
   padding:2rem;
   background-color: var(--background);
   color: var(--text);
-  font-family: 'Courier Prime', 'Courier New', sans-serif;
+  font-family: var(--code-font);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /*border-left: 5px solid var(--highlight);*/
-  margin-left: 0vw;
+  margin: none;
 }
 
 .signature_container{
@@ -131,18 +133,6 @@ section#welcome {
   padding: 2px;
 }
 
-.feather.orange{
-  color: orange;
-}
-
-.feather.red{
-  color: red;
-}
-
-.feather.thumb{
-  color: green;
-}
-
 .arrow-down{
   animation: wiggleDown 3s infinite;
 }
@@ -171,7 +161,7 @@ section#welcome {
   100% { transform: translateY(0); }
 }
 
-#side {
+#menu {
   position: absolute;
   top: 1rem; 
   right: 1rem;
@@ -191,11 +181,8 @@ section#portfolio>h1{
 }
 
 section#footer{
-  /*border-left: 5px solid var(--highlight);*/
-  /*margin-bottom: 2rem;
-  margin-right: 2rem;*/
   padding: 1rem;
-  font-family: 'Courier Prime', 'Courier New', sans-serif;
+  font-family: var(--code-font);
   display:flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -208,9 +195,7 @@ section#footer{
   border-radius: 5px;
   padding:5px;
   cursor: pointer;
-  /*transition: var(--transition-time);*/
   color: var(--highlight);
-  /*background-color: var(--translucent);*/
   background: none;
 	border: none;
 }
@@ -222,14 +207,12 @@ section#footer{
   max-height: 300px;
   position: relative;
   padding: 1rem 3rem;
-  /*border: 1px solid var(--border);*/
   border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color:inherit;
   transition: border var(--transition-time);
-  /*background-color: var(--border);*/
 }
 
 .content{
@@ -337,13 +320,10 @@ body.dark-mode .close-button:hover{
 }
 
 /*media queries*/
-@media (min-width: 576px) { 
-
-}
 
 @media (min-width: 768px) {
   .modal {
-    width: 90vw;
+    width: 50vw;
   }
 
   section#welcome {
@@ -352,7 +332,6 @@ body.dark-mode .close-button:hover{
   }
 
   section#cv{
-    /*border-left: 5px solid var(--highlight);*/
     margin-left: 10vw;
   }
 
@@ -364,14 +343,6 @@ body.dark-mode .close-button:hover{
     width: 80vw;
     margin-left: 10vw;
   }
-
-}
-
-@media (min-width: 992px) {
- 
- }
-
-@media (min-width: 1200px) {
 
 }
 
