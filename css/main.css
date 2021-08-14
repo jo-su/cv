@@ -21,7 +21,8 @@ body.light-mode {
   --subtext: #494949;
   --highlight: #293abc;
   --background: RGB(250,250,250);
-  --translucent: RGBA(221, 221, 221, 0.7);
+  --translucent: RGBA(221, 221, 221, 0.5);
+  --supertranslucent: RGBA(221, 221, 221, 0.3);
   --border: #ddd;
 }
 
@@ -30,7 +31,8 @@ body.dark-mode {
   --subtext: #aaaaaa;
   --highlight: #4e9feb;
   --background: black;
-  --translucent: RGBA(42,42,42,0.7);
+  --translucent: RGBA(42,42,42,0.5);
+  --supertranslucent: RGBA(221, 221, 221, 0.3);
   --border: #424242;
 }
 

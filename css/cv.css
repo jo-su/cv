@@ -32,11 +32,6 @@ section#cv {
   gap: 0.5rem; 
 }
 
-#mail{order: 1;}
-#linkedin{order: 2;}
-#github{order: 3;}
-#city{order: 4;}
-
 #kontaktua>div{
   display: flex;
   flex-direction: row;
@@ -52,7 +47,7 @@ section#cv {
   grid-area: top;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 #izena{
@@ -60,21 +55,17 @@ section#cv {
   font-size: 2rem;
   font-weight: 700;
   color: var(--highlight);
-  margin-top:5rem;
-  margin-bottom: 1rem;
 }
 
 #postua{
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   color: var(--highlight);
-  margin-bottom: 1rem;
 }
 
 #deskribapena{
   grid-area: deskribapena;
   padding: 1rem;
-  margin-top:1vw;
 }
 
 #photo{
@@ -83,20 +74,26 @@ section#cv {
   background-size: 100%;
   background-position: center;
   background-size:cover;
-  margin-right: 1rem;
   border-radius: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .atala{
+  position: relative;
   margin-bottom: 1rem;
+  background-color: var(--supertranslucent);
+  border-radius: 5px;
+  padding: 1rem;
 }
 
 .atala>p{
+  position: absolute;
+  top: -0.9rem;
+  left: 1rem;
   color: var(--highlight);
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  border-bottom: 3px solid var(--highlight);
-  margin-bottom: 0.5rem;
 }
 
 .atala div p{
@@ -143,7 +140,6 @@ button{
 .short>div{
   display: flex;
   flex-direction: row;
-  gap: 0.3rem;
   flex-wrap: wrap;
 }
 
@@ -156,7 +152,14 @@ button{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 0.5rem;
+}
+
+.icons i{
+  margin-right: 0.5rem;
+}
+
+.short>div>p{
+  margin-right: 0.5rem;
 }
 
 @media (min-width: 700px) {
@@ -164,7 +167,7 @@ button{
     position:relative;
     display: grid;
     grid-template-rows: auto auto auto;
-    grid-template-columns: 20rem ;
+    grid-template-columns: 21rem ;
     grid-template-areas:"photo top"
                         "photo top"
                         "photo deskribapena"
@@ -172,8 +175,13 @@ button{
   }
 
   #top{
-    margin-left:1rem;
+    padding-left: 1rem;
   }
+
+  #photo{
+    margin: 1rem;
+  }
+
 }
 
 @media (min-width: 1250px) {
