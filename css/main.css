@@ -311,6 +311,7 @@ i{
 
   background: var(--background);
   border: 1px solid var(--border);
+  border-bottom: none;
   border-radius: 1rem 1rem 0rem 0rem;
   
   -webkit-transition: bottom 1.5s ease-in-out;
@@ -318,7 +319,7 @@ i{
   -o-transition: bottom 1.5s ease-in-out;
   transition: bottom 1.5s ease-in-out;
 
-  box-shadow: 0 0 5px var(--translucent);
+  box-shadow: 0 0 6px var(--translucent);
 }
 
 #modal.opened{
@@ -343,6 +344,10 @@ body.modal-open {
   color: var(--text);
   font-size: 2rem;
   text-align: center;
+}
+
+.close-button i{
+  /*color: inherit;*/
 }
 
 .modal-content{
