@@ -91,7 +91,7 @@ section#portfolio {
   grid-area: type;
   font-size: 1.25rem;
   color: var(--highlight);
-  text-align: center;
+  text-align: left;
   font-family: var(--title-font);
   position: absolute;
   top: -1.3rem;
@@ -105,7 +105,7 @@ section#portfolio {
   font-size: 1.25rem;
   padding: 0.3rem 0.8rem;
   color: var(--highlight);
-  text-align: left;
+  text-align: center;
   font-family: var(--title-font);
   position: absolute;
   top: -1.3rem;
