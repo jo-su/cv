@@ -26,10 +26,14 @@ section#cv {
 
 .atala{
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   background: var(--translucent);
   border-radius: 5px;
   padding: 1rem;
+}
+
+.atala:last-child{
+  margin-bottom: 0;
 }
 
 .atala>p{

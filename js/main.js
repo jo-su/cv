@@ -5,7 +5,6 @@ window.onload = function () {
 	const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
 
 	var modal = document.querySelector("#modal");
-	var iframe = document.querySelector("iframe");
 	var modalOverlay = document.querySelector("#modal-overlay");
 	var closeButton = document.querySelector("#close-button");
 
@@ -45,15 +44,8 @@ window.onload = function () {
 		}
 	});
 
-	closeButton.addEventListener("click", function () {
-		modal.classList.remove("opened");
-		modalOverlay.classList.remove("opened");
-	});
-
-	modalOverlay.addEventListener("click", function () {
-		modal.classList.remove("opened");
-		modalOverlay.classList.remove("opened");
-	});
+	closeButton.addEventListener("click", closeModal);
+	modalOverlay.addEventListener("click", closeModal);
 
 	function copy() {
 		if(this.classList.contains("copy")){
@@ -62,7 +54,6 @@ window.onload = function () {
 			var copyText = this.getAttribute('copy-value');
 			console.log(copyText);
 			var original = this.innerHTML;
-			/*var input = document.body.appendChild(document.createElement("input"));*/
 			var input = this.appendChild(document.createElement("input"));
 			input.value = copyText;
 			input.focus();
@@ -88,18 +79,16 @@ window.onload = function () {
         box.style.background="url("+url+") no-repeat right"; 
     }
 
-	// Send message to the iFrame with the theme we want to activate.
-	function activateIframeTheme() {
-		if (iframe && iframe.contentWindow) {
-	  		iframe.contentWindow.postMessage((localStorage.getItem("theme")), "*" );
-            console.log("sent message to iframe: "+ (localStorage.getItem("theme")));
-		}
- 	}
-
 	function openModal() {
-		iframe.setAttribute("src", this.getAttribute("href"));
+		document.body.classList.add("modal-open");
 		modal.classList.add("opened");
 		modalOverlay.classList.add("opened");
+	}
+
+	function closeModal() {
+		document.body.classList.remove("modal-open");
+		modal.classList.remove("opened");
+		modalOverlay.classList.remove("opened");
 	}
 
 	function scrollToTop() {

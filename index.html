@@ -15,7 +15,7 @@
 
 	<!--modu aldaketa, hizkuntza...-->
 	<nav id="menu">
-		<a href="/es">&lt;lang="es"&gt;</a>
+		<a class="c-highlight bold" href="/es">&lt;lang="es"&gt;</a>
 		<button class="dk-button">
 			<i class="bi bi-moon-fill"></i>
 		</button>
@@ -110,7 +110,7 @@
 	<hr class="section">
 	<section id="cv">
 
-		<div class="atala photo">
+		<div class="atala photo pic">
 			<div id="photo" class="pic"></div>
 		</div>
 		
@@ -141,7 +141,7 @@
 				</div>
 			</div>
 
-			<div class="atala">
+			<div class="atala esperientzia">
 				<p>Lan Esperientzia</p>
 				<div>
 					<p class="data">2019 uztaila - gaur egun</p>
@@ -153,7 +153,7 @@
 				</div>
 			</div>
 
-			<div class="atala">
+			<div class="atala esperientzia">
 				<p>Esperientzia Gehigarria</p>
 				<div>
 					<p class="data">2019 martxoa</p>
@@ -396,7 +396,7 @@
 	<hr class="section">
 	<section id="footer">
 		<div>
-			<p>// <a href="#acknowledgements">acknowledgements</a> </p>
+			<p>// <a class="modal-button c-highlight">aitorpenak</a> </p>
 			<p>// &copy; 2021 Josu Garralda</p>
 		</div>
 
@@ -404,6 +404,59 @@
 			<i class="bi bi-arrow-up-circle"></i>
 		</div>
 	</section>
+
+	<!--modal-->
+
+		<div id="modal" class="modal" >
+			<div class="modal-inside">
+				<div class="close-button" id="close-button">
+					<i class="bi bi-chevron-compact-down"></i>
+				</div>
+				<div class="modal-content">
+						<div class="atala bold">
+							Eskerrak orrialdean erabilitako hainbat baliabideen egileei.
+						</div>
+						<div class="atala">
+							<p>Ikonoak</p>
+							<div>
+								<a class="lekua" href="https://feathericons.com" target="_blank">Feather Icons</a>
+								<p class="titulua">Copyright &copy; 2013-2017 Cole Bemis</p>
+								<a class="c-text italic" href="https://github.com/feathericons/feather/blob/master/LICENSE" target="_blank">MIT License</a>
+								
+							</div>
+							<hr>
+							<div>
+								<a class="lekua" href="https://icons.getbootstrap.com" target="_blank">Bootstrap Icons</a>
+								<p class="titulua">Copyright &copy; 2013-2017 The Bootstrap Authors</p>
+								<a class="c-text italic" href="https://github.com/twbs/icons/blob/main/LICENSE.md" target="_blank">MIT License</a>
+							</div>
+
+						</div>
+						<div class="atala">
+							<p>Letra iturriak</p>
+							<div>
+								<a class="lekua" href="https://quoteunquoteapps.com/courierprime/" target="_blank">Courier Prime</a>
+								<p class="titulua">Alan Dague-Greene</p>
+								<a class="c-text italic" href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL" target="_blank">Open Font License</a>
+
+							</div>
+							<hr>
+							<div>
+								<a class="lekua" href="https://www.indiantypefoundry.com/fonts/poppins" target="_blank">Poppins</a>
+								<p class="titulua">Indian Type Foundry, Jonny Pinhorn</p>
+								<a class="c-text italic" href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL" target="_blank">Open Font License</a>
+							</div>
+							<hr>
+							<div>
+								<a class="lekua" href="https://www.lexend.com/" target="_blank">Lexend</a>
+								<p class="titulua">Bonnie Shaver-Troup, Thomas Jockin, Santiago Orozco, Héctor Gomez</p>
+								<a class="c-text italic" href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL" target="_blank">Open Font License</a>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	<div class="modal-overlay" id="modal-overlay"></div>
 
 </body>
 
