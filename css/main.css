@@ -108,6 +108,7 @@ section#welcome {
 
 .button{
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .button>*{
@@ -119,15 +120,20 @@ section#welcome {
   font-size: var(--text-size);
 }
 
-.let a{
+.let .button{
   text-decoration: none;
   color: var(--highlight);
   font-weight: bold;
   font-size: var(--text-size);
 }
 
-.let a:hover{
+.let .button:hover{
   text-decoration: underline;
+}
+
+.copying, .copying:hover{
+  cursor:default !important;
+  text-decoration: none !important; 
 }
 
 .feather{
@@ -234,13 +240,13 @@ section#footer{
   transition: var(--transition-time);
 }
 
-a{
+a, .button{
   color:  var(--highlight);
   font-weight: bold;
   text-decoration: none;
 }
 
-a:hover{
+a, .button :hover{
   text-decoration: underline;
 }
 

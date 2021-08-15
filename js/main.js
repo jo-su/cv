@@ -9,6 +9,9 @@ window.onload = function () {
 	var modalOverlay = document.querySelector("#modal-overlay");
 	var closeButton = document.querySelector("#close-button");
 
+	var copyButtons = document.querySelectorAll('.copy');
+    copyButtons.forEach(copyButton => copyButton.addEventListener('click', copy, false));
+
 	var openModalButtons = document.querySelectorAll('.modal-button');
     openModalButtons.forEach(openModalButton => openModalButton.addEventListener('click', openModal, false));
 
@@ -30,18 +33,17 @@ window.onload = function () {
 
 	document.getElementById("scroll-up").addEventListener("click", scrollToTop);
 
-	try{
-		const btn = document.querySelector(".dk-button");
-		btn.addEventListener("click", function () {
-			if (localStorage.getItem("theme") == "dark") {
-				changeTheme("light");
-				console.log("manual LIGHT")
-			} else {
-				changeTheme("dark");
-				console.log("manual DARK")
-			}
-		});
-	} catch(e){}
+	
+	const btn = document.querySelector(".dk-button");
+	btn.addEventListener("click", function () {
+		if (localStorage.getItem("theme") == "dark") {
+			changeTheme("light");
+			console.log("manual LIGHT")
+		} else {
+			changeTheme("dark");
+			console.log("manual DARK")
+		}
+	});
 
 	closeButton.addEventListener("click", function () {
 		modal.classList.remove("opened");
@@ -52,6 +54,30 @@ window.onload = function () {
 		modal.classList.remove("opened");
 		modalOverlay.classList.remove("opened");
 	});
+
+	function copy() {
+		if(this.classList.contains("copy")){
+			this.classList.remove("copy");
+			this.classList.add("copying");
+			var copyText = this.getAttribute('copy-value');
+			console.log(copyText);
+			var original = this.innerHTML;
+			/*var input = document.body.appendChild(document.createElement("input"));*/
+			var input = this.appendChild(document.createElement("input"));
+			input.value = copyText;
+			input.focus();
+			input.select();
+			document.execCommand('copy');
+			input.parentNode.removeChild(input);
+			this.innerHTML = "<i class='feather' data-feather='clipboard'></i>copied!";
+			feather.replace();
+			setTimeout(function() {
+				this.innerHTML = original;
+				this.classList.remove("copying");
+				this.classList.add("copy");
+			}.bind(this), 2500);
+		}
+	} 
 
 	function showMore() {
         this.parentElement.classList.toggle("opened");
