@@ -302,7 +302,7 @@ i{
   width: 100vw;
   max-width: 700px;
   height: 80vh;
-  bottom: -80vh;
+  bottom: -90vh;
 
   left: 50%;
   transform: translateX(-50%);
@@ -313,10 +313,10 @@ i{
   border: 1px solid var(--border);
   border-radius: 1rem 1rem 0rem 0rem;
   
-  -webkit-transition: bottom 1.5s ease-in-out;
-  -moz-transition: bottom 1.5s ease-in-out;
-  -o-transition: bottom 1.5s ease-in-out;
-  transition: bottom 1.5s ease-in-out;
+  -webkit-transition: bottom 1s ease-in-out;
+  -moz-transition: bottom 1s ease-in-out;
+  -o-transition: bottom 1s ease-in-out;
+  transition: bottom 1s ease-in-out;
 
   box-shadow: 0 0 5px var(--translucent);
 }
