@@ -1,28 +1,7 @@
 window.onload = function () {
 
+	//dark mode automatic detection
 	const btn_img = document.querySelector(".dk-button i");
-	const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-	const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
-
-	var modal = document.querySelector("#modal");
-	var modalOverlay = document.querySelector("#modal-overlay");
-	var closeButton = document.querySelector("#close-button");
-
-	var copyButtons = document.querySelectorAll('.copy');
-    copyButtons.forEach(copyButton => copyButton.addEventListener('click', copy, false));
-
-	var openModalButtons = document.querySelectorAll('.modal-button');
-    openModalButtons.forEach(openModalButton => openModalButton.addEventListener('click', openModal, false));
-
-	var boxes = document.querySelectorAll('.box');
-    boxes.forEach((box) => setBackground(box));
-    
-    var moreButtons = document.querySelectorAll('.more-button');
-    moreButtons.forEach(openModalButton => openModalButton.addEventListener('click', showMore, false));
-
-	setDetectedTheme();
-	
-	feather.replace();
 
 	window.matchMedia("(prefers-color-scheme: dark)")
 		.addEventListener("change", e => e.matches && setDetectedTheme());
@@ -30,17 +9,81 @@ window.onload = function () {
 	window.matchMedia("(prefers-color-scheme: light)")
 		.addEventListener("change", e => e.matches && setDetectedTheme());
 
+	setDetectedTheme();
+	/////
+
+	//feather icons
+	feather.replace();
+	/////
+
+	//copy to clipboard
+	var copyButtons = document.querySelectorAll('.copy');
+    copyButtons.forEach(copyButton => copyButton.addEventListener('click', copy, false));
+	/////
+
+	//acknowledgements modal button
+	var openModalButtons = document.querySelectorAll('.modal-button');
+    openModalButtons.forEach(openModalButton => openModalButton.addEventListener('click', openModal, false));
+
+	var modal = document.querySelector("#modal");
+	var modalOverlay = document.querySelector("#modal-overlay");
+	var closeButton = document.querySelector("#close-button");
+	closeButton.addEventListener("click", closeModal);
+	modalOverlay.addEventListener("click", closeModal);
+	/////
+
+	//portfolio box background
+	var boxes = document.querySelectorAll('.box');
+    boxes.forEach((box) => setBackground(box));
+	/////
+    
+	//portfolio box more button
+    var moreButtons = document.querySelectorAll('.more-button');
+    moreButtons.forEach(openModalButton => openModalButton.addEventListener('click', showMore, false));
+	/////
+
+	//scroll to top button
 	try{
 		document.getElementById("scroll-up").addEventListener("click", scrollToTop);
 	}catch(e){};
+	/////
 
 	//for 404 page
-	try{
-		document.getElementById("url").innerHTML = window.location.href.replace(/(^\w+:|^)\/\//, '');
-	}catch(e){};
-	
+	var url404 = document.getElementById("url");
+	if(typeof(url404) != 'undefined' && url404 != null){
+		console.log("page not found")
+		url404.innerHTML = window.location.href.replace(/(^\w+:|^)\/\//, '');
+	}
+	/////
 
+	//image on hover
+	document.getElementById("cursorhover").addEventListener("pointerenter", showImage);
+	document.getElementById("cursorhover").addEventListener("pointerleave", hideImage);
+
+	let attached = false;
+	let imageContainer = document.querySelector("#cursorimage");
+
+	const followMouse = (event) => {
+		imageContainer.style.left = event.x + "px";
+		imageContainer.style.top = event.y + "px";
+	  }
+	  
+	function showImage() {
+		if (!attached) {
+		  attached = true;
+		  imageContainer.style.display = "block";
+		  document.addEventListener("pointermove", followMouse);
+		}
+	}
+	  
+	function hideImage() {
+		attached = false;
+		imageContainer.style.display = "";
+		document.removeEventListener("pointermove", followMouse);
+	}
+	/////
 	
+	// dark mode button
 	const btn = document.querySelector(".dk-button");
 	btn.addEventListener("click", function () {
 		if (localStorage.getItem("theme") == "dark") {
@@ -51,10 +94,9 @@ window.onload = function () {
 			console.log("manual DARK")
 		}
 	});
+	/////
 
-	closeButton.addEventListener("click", closeModal);
-	modalOverlay.addEventListener("click", closeModal);
-
+	// copy to clipboard
 	function copy() {
 		if(this.classList.contains("copy")){
 			this.classList.remove("copy");
@@ -77,7 +119,9 @@ window.onload = function () {
 			}.bind(this), 2500);
 		}
 	} 
+	/////
 
+	// portfolio box
 	function showMore() {
         this.parentElement.classList.toggle("opened");
 	}
@@ -86,7 +130,9 @@ window.onload = function () {
         var url = box.getAttribute("bg-src");
         box.style.background="url("+url+") no-repeat right"; 
     }
+	/////
 
+	// modal (acknowledgements)
 	function openModal() {
 		document.body.classList.add("modal-open");
 		modal.classList.add("opened");
@@ -98,15 +144,19 @@ window.onload = function () {
 		modal.classList.remove("opened");
 		modalOverlay.classList.remove("opened");
 	}
+	/////
 
+	//scroll to top
 	function scrollToTop() {
-		// Scroll to top logic
 		document.documentElement.scrollTo({
 			top: 0,
 			behavior: "smooth"
 		})
 	}
+	/////
 
+
+	//dark mode
 	function setDetectedTheme() {
 		const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 		if (prefersDarkScheme.matches) {
@@ -137,6 +187,7 @@ window.onload = function () {
 			localStorage.setItem("theme", mode);
 		}
 	}
+	/////
 
 };
 

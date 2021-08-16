@@ -63,42 +63,54 @@ section#welcome {
   position: relative;
   height: 100vh;
   width: 100vw;
-  padding:2rem;
   color: var(--text);
   font-family: var(--code-font);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: none;
 }
 
-.signature_container{
-  width: 50vw;
-  max-width:300px;
+.aurkezpena{
+  font-size: var(--text-size);
+  max-width: 1300px;
+  padding:0rem 1rem 0rem 1rem;
 }
 
-.signature_container path,line{
-  stroke: var(--highlight);
+#cursorimage{
+  position: absolute;
+  display: none;
+  width: 150px;
+  height: 150px;
+  background-image: url(../resources/img/profile.jpg);
+  background-size: cover;
+  pointer-events: none;
+  /*border-radius: 0% 50% 50% 50%;*/
+}
+
+#cursorhover{
+  cursor: crosshair;
 }
 
 .lets{
   display:flex;
   flex-direction: column;
   justify-content: space-around;
+  padding:0rem 1rem 0rem 1rem;
 }
 
 .let, .button{
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 30px;
 }
 
 .let .array{
   display: flex;
   flex-direction: row;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   margin-left: 0.5rem;
 }
 
@@ -144,6 +156,10 @@ section#welcome {
 
 .arrow-down{
   animation: wiggleDown 3s infinite;
+  position: absolute;
+  bottom:1.5rem;
+  left:1.5rem;
+  font-size: 2rem;
 }
 
 .arrow-up{
@@ -160,7 +176,7 @@ section#welcome {
 
 @keyframes wiggleDown {
   0% { transform: translateY(0); }
-  50% { transform: translateY(2em); }
+  50% { transform: translateY(0.5rem); }
   100% { transform: translateY(0); }
 }
 
@@ -186,6 +202,17 @@ section#welcome {
   gap: 1rem;
 }
 
+.signature_container{
+  width: 80px;
+  margin-top: 0.25rem;
+  margin-left: 1.5rem;
+  margin-right: auto;
+}
+
+.signature_container path,line{
+  stroke: var(--highlight);
+}
+
 hr.section {
 	border: 0;
 	border-top: 1px solid var(--translucent);
@@ -206,7 +233,6 @@ section#footer{
   flex-wrap: nowrap;
   justify-content: space-between;
 }
-
 
 .dk-button{
   font-size: 1rem;
@@ -301,29 +327,24 @@ i{
   /* Probably need media queries here */
   width: 100vw;
   max-width: 700px;
-  height: 80vh;
-  bottom: -95vh;
-
+  height: 0vh;
+  position: fixed;
+  bottom: -2px;
   left: 50%;
   transform: translateX(-50%);
-  
-  position: fixed;
-
   background: var(--background);
   border: 1px solid var(--border);
   border-bottom: none;
   border-radius: 1rem 1rem 0rem 0rem;
-  
-  -webkit-transition: bottom 1.5s ease-in-out;
-  -moz-transition: bottom 1.5s ease-in-out;
-  -o-transition: bottom 1.5s ease-in-out;
-  transition: bottom 1.5s ease-in-out;
-
+  -webkit-transition: height 1.5s ease-in-out;
+  -moz-transition: height 1.5s ease-in-out;
+  -o-transition: height 1.5s ease-in-out;
+  transition: height 1.5s ease-in-out;
   box-shadow: 0 0 6px var(--translucent);
 }
 
 #modal.opened{
-  bottom: 0;
+  height: 80vh;
 }
 
 body.modal-open {
@@ -380,12 +401,12 @@ body.modal-open {
 
 body.light-mode .modal-overlay:hover,
 body.light-mode .close-button:hover{
-  cursor: url("../resources/svg/close.svg"), default;
+  cursor: url("../resources/svg/close.svg"), pointer;
 }
 
 body.dark-mode .modal-overlay:hover,
 body.dark-mode .close-button:hover{
-  cursor: url("../resources/svg/close-white.svg"), default;
+  cursor: url("../resources/svg/close-white.svg"), pointer;
 }
 
 @keyframes typing {
@@ -405,9 +426,9 @@ body.dark-mode .close-button:hover{
 @media (min-width: 768px) {
 
 
-  section#welcome {
+  .aurkezpena, .lets{
+    padding-left: 10vw;
     width: 90vw;
-    margin-left: 10vw;
   }
 
   section#cv{
