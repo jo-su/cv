@@ -82,7 +82,7 @@ section#welcome {
   display: none;
   width: 150px;
   height: 150px;
-  background-image: url(../resources/img/profile.jpg);
+  background-image: url(../resources/img/profile.png);
   background-size: cover;
   pointer-events: none;
   /*border-radius: 0% 50% 50% 50%;*/
@@ -205,7 +205,7 @@ section#welcome {
 .signature_container{
   width: 80px;
   margin-top: 0.25rem;
-  margin-left: 1.5rem;
+  margin-left: 0.5rem;
   margin-right: auto;
 }
 
