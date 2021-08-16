@@ -48,14 +48,6 @@ window.onload = function () {
 	}catch(e){};
 	/////
 
-	//for 404 page
-	var url404 = document.getElementById("url");
-	if(typeof(url404) != 'undefined' && url404 != null){
-		console.log("page not found")
-		url404.innerHTML = window.location.href.replace(/(^\w+:|^)\/\//, '');
-	}
-	/////
-
 	//image on hover
 	document.getElementById("cursorhover").addEventListener("pointerenter", showImage);
 	document.getElementById("cursorhover").addEventListener("pointerleave", hideImage);
