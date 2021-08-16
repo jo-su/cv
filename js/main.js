@@ -36,7 +36,7 @@ window.onload = function () {
 
 	//for 404 page
 	try{
-		document.getElementById("url").innerHTML = window.location.href;
+		document.getElementById("url").innerHTML = window.location.href.replace(/(^\w+:|^)\/\//, '');
 	}catch(e){};
 	
 
