@@ -30,7 +30,15 @@ window.onload = function () {
 	window.matchMedia("(prefers-color-scheme: light)")
 		.addEventListener("change", e => e.matches && setDetectedTheme());
 
-	document.getElementById("scroll-up").addEventListener("click", scrollToTop);
+	try{
+		document.getElementById("scroll-up").addEventListener("click", scrollToTop);
+	}catch(e){};
+
+	//for 404 page
+	try{
+		document.getElementById("url").innerHTML = window.location.href;
+	}catch(e){};
+	
 
 	
 	const btn = document.querySelector(".dk-button");
