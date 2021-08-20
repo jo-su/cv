@@ -75,6 +75,7 @@ section#portfolio {
 .box .box-more{
   display:none;
   background-color: var(--translucent);
+  border-radius: inherit;
 
 }
 
