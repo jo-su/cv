@@ -54,6 +54,14 @@ html, body{
   color: var(--text);
 }
 
+html{
+  overflow-x: hidden;
+}
+
+nav#menu{
+  padding-right: 1.5rem;
+}
+
 body{
   position: relative;
   font-family: var(--code-font);
