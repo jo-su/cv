@@ -132,6 +132,13 @@ section#cv {
   color: var(--subtext);
 }
 
+.last-update{
+  font-weight: 200;
+  font-size: 9;
+  color: var(--subtext);
+  padding-left: 16px;
+}
+
 p.oharra{
   font-weight:300;
   font-size:7;
