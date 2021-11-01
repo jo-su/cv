@@ -97,6 +97,7 @@ section#cv {
   grid-area: photo;
   display: none;
 }
+
 #photo{
   background-image: url("../resources/img/pic.png");
   background-size: 100%;
@@ -112,6 +113,13 @@ section#cv {
   font-weight: 400;
   font-size: 10;
   color: var(--subtext);
+}
+
+.modalitatea{
+  font-weight: 200;
+  font-size: 10;
+  color: var(--subtext);
+  text-align: right;
 }
 
 .lekua{
